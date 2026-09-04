@@ -283,8 +283,204 @@ footer{border-top:1px solid var(--line);background:#FFFFFF;padding:46px 0 26px;m
        <option value="off">الأعلى خصماً</option>
      </select>
    </div>
-   <div class="filters" id="filters"></div>
-   <div class="grid" id="grid"></div>
+   <div class="filters" id="filters">
+<button class="chip on" data-k="all">الكل</button><button class="chip" data-k="wear">ملابس</button><button class="chip" data-k="acc">إكسسوارات</button><button class="chip" data-k="home">المنزل والمكتب</button><button class="chip" data-k="gift">هدايا</button>
+  </div>
+   <div class="grid" id="grid">
+
+    <div class="card">
+      <div class="thumb"><div class="tag hot">الأكثر مبيعاً</div>
+        <button class="fav" data-fav="p2" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#E7ECF5"></stop></linearGradient></defs><path d="M36 22 h28 l20 12 -9 15 -7-5 v40 H32 V44 l-7 5 -9-15z" fill="url(#a2)" stroke="#94A3BE" stroke-width="2.5" stroke-linejoin="round"></path><path d="M36 22 q14 12 28 0" stroke="#152B5B" stroke-width="3" fill="none"></path><path d="M42 56 h16" stroke="#F76B1C" stroke-width="4" stroke-linecap="round"></path><path d="M46 65 h8" stroke="#1FB865" stroke-width="4" stroke-linecap="round"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">ملابس</div>
+        <h4>تيشيرت "٩٦"</h4>
+        <div class="desc">قطن مصري ناعم · طباعة ذهبية</div>
+        <div class="rate">★ <span class="en">4.8</span> · <span class="en">530</span> عملية شراء</div>
+        <div class="price"><b class="en">119 <i>SAR</i></b><s class="en">159</s></div>
+        <button class="add" data-add="p2">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag hot">الأكثر مبيعاً</div>
+        <button class="fav" data-fav="p12" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="b3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF8F45"></stop><stop offset="1" stop-color="#DE5605"></stop></linearGradient></defs><circle cx="50" cy="28" r="12" stroke="#152B5B" stroke-width="5" fill="none"></circle><path d="M50 40 v10" stroke="#152B5B" stroke-width="5"></path><rect x="33" y="50" width="34" height="32" rx="9" fill="url(#b3)"></rect><path d="M50 57 l3.2 6.6 7.3 1-5.3 5.2 1.3 7.2 -6.5-3.5 -6.5 3.5 1.3-7.2 -5.3-5.2 7.3-1z" fill="#fff"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">هدايا</div>
+        <h4>ميدالية معدنية مطلية</h4>
+        <div class="desc">نحاس مطلي ذهب · علبة هدية</div>
+        <div class="rate">★ <span class="en">4.8</span> · <span class="en">488</span> عملية شراء</div>
+        <div class="price"><b class="en">39 <i>SAR</i></b><s class="en">55</s></div>
+        <button class="add" data-add="p12">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-24%</div>
+        <button class="fav" data-fav="p1" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3ED886"></stop><stop offset="1" stop-color="#159A52"></stop></linearGradient></defs><path d="M35 20 q15 12 30 0 l18 12 -8 16 -6-4 v40 H31 V44 l-6 4 -8-16z" fill="url(#a1)"></path><path d="M35 20 q15 16 30 0" stroke="#fff" stroke-width="3" fill="none" opacity=".85"></path><path d="M46 40 v18 M54 40 v18" stroke="#0D5C33" stroke-width="2.5" stroke-linecap="round"></path><circle cx="50" cy="66" r="3.5" fill="#F76B1C"></circle></svg>
+      </div>
+      <div class="info">
+        <div class="cat">ملابس</div>
+        <h4>هودي الإصدار الوطني</h4>
+        <div class="desc">قطن ثقيل ٤٢٠ جرام · تطريز مرفوع</div>
+        <div class="rate">★ <span class="en">4.9</span> · <span class="en">412</span> عملية شراء</div>
+        <div class="price"><b class="en">249 <i>SAR</i></b><s class="en">329</s></div>
+        <button class="add" data-add="p1">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-31%</div>
+        <button class="fav" data-fav="p11" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="b2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3ED886"></stop><stop offset="1" stop-color="#159A52"></stop></linearGradient></defs><path d="M38 18 h22 v34 q0 10 10 14 l8 4 q8 4 4 12 -4 8 -12 4 l-22-10 q-10-5-10-18z" fill="url(#b2)"></path><path d="M38 30 h22" stroke="#F76B1C" stroke-width="5"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">ملابس</div>
+        <h4>جوارب الوطن (٣ أزواج)</h4>
+        <div class="desc">قطن مريح · مقاس موحد</div>
+        <div class="rate">★ <span class="en">4.4</span> · <span class="en">401</span> عملية شراء</div>
+        <div class="price"><b class="en">45 <i>SAR</i></b><s class="en">65</s></div>
+        <button class="add" data-add="p11">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-27%</div>
+        <button class="fav" data-fav="p4" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#EDF1F9"></stop></linearGradient></defs><rect x="22" y="30" width="44" height="46" rx="9" fill="url(#a4)" stroke="#152B5B" stroke-width="2.5"></rect><path d="M66 42 h10 a10 10 0 0 1 0 20 h-10" stroke="#152B5B" stroke-width="5" fill="none"></path><path d="M32 48 h24" stroke="#F76B1C" stroke-width="4" stroke-linecap="round"></path><path d="M32 58 h16" stroke="#1FB865" stroke-width="4" stroke-linecap="round"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">المنزل والمكتب</div>
+        <h4>كوب الإصدار المحدود</h4>
+        <div class="desc">سيراميك ٣٥٠ مل · آمن بالميكرويف</div>
+        <div class="rate">★ <span class="en">4.8</span> · <span class="en">376</span> عملية شراء</div>
+        <div class="price"><b class="en">69 <i>SAR</i></b><s class="en">95</s></div>
+        <button class="add" data-add="p4">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag new">جديد</div>
+        <button class="fav" data-fav="p10" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28437C"></stop><stop offset="1" stop-color="#0D1C3E"></stop></linearGradient></defs><rect x="26" y="18" width="48" height="64" rx="7" fill="url(#b1)"></rect><rect x="26" y="18" width="11" height="64" fill="#F76B1C"></rect><path d="M47 40 h20 M47 52 h20" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity=".9"></path><path d="M47 64 h12" stroke="#3ED886" stroke-width="3.5" stroke-linecap="round"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">المنزل والمكتب</div>
+        <h4>دفتر ملاحظات ٩٦</h4>
+        <div class="desc">١٦٠ صفحة · غلاف صلب · ورق ١٠٠ جرام</div>
+        <div class="rate">★ <span class="en">4.6</span> · <span class="en">312</span> عملية شراء</div>
+        <div class="price"><b class="en">49 <i>SAR</i></b></div>
+        <button class="add" data-add="p10">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-25%</div>
+        <button class="fav" data-fav="p3" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FF8F45"></stop><stop offset="1" stop-color="#DE5605"></stop></linearGradient></defs><path d="M20 58 q0-32 30-32 t30 32z" fill="url(#a3)"></path><path d="M18 58 h50 q16 0 16 8 H18z" fill="#152B5B"></path><circle cx="50" cy="28" r="4" fill="#fff"></circle><path d="M50 34 v22" stroke="#fff" stroke-width="2.5" opacity=".8"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">إكسسوارات</div>
+        <h4>كاب OKs الأخضر</h4>
+        <div class="desc">قماش مقاوم · مقاس قابل للتعديل</div>
+        <div class="rate">★ <span class="en">4.7</span> · <span class="en">298</span> عملية شراء</div>
+        <div class="price"><b class="en">89 <i>SAR</i></b><s class="en">119</s></div>
+        <button class="add" data-add="p3">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-20%</div>
+        <button class="fav" data-fav="p7" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a7" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28437C"></stop><stop offset="1" stop-color="#0D1C3E"></stop></linearGradient></defs><rect x="32" y="14" width="36" height="72" rx="11" fill="url(#a7)"></rect><path d="M44 64 l6-24 6 24z" fill="#F76B1C"></path><rect x="44" y="19" width="12" height="3" rx="1.5" fill="#7B8DB5"></rect><circle cx="50" cy="76" r="3" fill="#1FB865"></circle></svg>
+      </div>
+      <div class="info">
+        <div class="cat">إكسسوارات</div>
+        <h4>كفر جوال الوطني</h4>
+        <div class="desc">متوفر لأغلب الموديلات · حماية مزدوجة</div>
+        <div class="rate">★ <span class="en">4.5</span> · <span class="en">265</span> عملية شراء</div>
+        <div class="price"><b class="en">79 <i>SAR</i></b><s class="en">99</s></div>
+        <button class="add" data-add="p7">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-25%</div>
+        <button class="fav" data-fav="p6" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a6" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#DE5605"></stop><stop offset="1" stop-color="#FF8F45"></stop></linearGradient></defs><rect x="34" y="40" width="32" height="40" rx="8" fill="url(#a6)"></rect><rect x="43" y="24" width="14" height="16" rx="3" fill="#152B5B"></rect><rect x="40" y="18" width="20" height="8" rx="3" fill="#28437C"></rect><path d="M42 56 h16" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"></path><path d="M46 64 h8" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".55"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">هدايا</div>
+        <h4>عطر "٢٣ سبتمبر"</h4>
+        <div class="desc">عود وورد وعنبر · ٥٠ مل · ثبات طويل</div>
+        <div class="rate">★ <span class="en">5.0</span> · <span class="en">221</span> عملية شراء</div>
+        <div class="price"><b class="en">299 <i>SAR</i></b><s class="en">399</s></div>
+        <button class="add" data-add="p6">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag off en">-24%</div>
+        <button class="fav" data-fav="p9" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a9" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#EEF2F9"></stop></linearGradient></defs><path d="M24 26 h52 l-8 54 H32z" fill="url(#a9)" stroke="#94A3BE" stroke-width="2.5" stroke-linejoin="round"></path><path d="M24 26 h52" stroke="#152B5B" stroke-width="5"></path><path d="M34 42 h32 M33 56 h34 M35 68 h28" stroke="#F76B1C" stroke-width="2.5" opacity=".75"></path><path d="M40 30 v50 M60 30 v50" stroke="#F76B1C" stroke-width="2.5" opacity=".75"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">ملابس</div>
+        <h4>شماغ الإصدار</h4>
+        <div class="desc">قطن فاخر · تطريز خفيف بالحواف</div>
+        <div class="rate">★ <span class="en">4.9</span> · <span class="en">207</span> عملية شراء</div>
+        <div class="price"><b class="en">189 <i>SAR</i></b><s class="en">249</s></div>
+        <button class="add" data-add="p9">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag new">جديد</div>
+        <button class="fav" data-fav="p5" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28437C"></stop><stop offset="1" stop-color="#0D1C3E"></stop></linearGradient></defs><path d="M26 36 h48 l6 44 H20z" fill="url(#a5)"></path><path d="M38 38 v-8 a12 12 0 0 1 24 0 v8" stroke="#F76B1C" stroke-width="4.5" fill="none"></path><path d="M40 58 h20" stroke="#1FB865" stroke-width="4" stroke-linecap="round"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">إكسسوارات</div>
+        <h4>شنطة الوطن</h4>
+        <div class="desc">كانفاس متين · تتحمل ١٠ كجم</div>
+        <div class="rate">★ <span class="en">4.6</span> · <span class="en">184</span> عملية شراء</div>
+        <div class="price"><b class="en">139 <i>SAR</i></b></div>
+        <button class="add" data-add="p5">أضف للسلة</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="thumb"><div class="tag new">جديد</div>
+        <button class="fav" data-fav="p8" aria-label="مفضلة">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+        </button>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="a8" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3ED886"></stop><stop offset="1" stop-color="#159A52"></stop></linearGradient></defs><path d="M28 18 v66" stroke="#152B5B" stroke-width="5" stroke-linecap="round"></path><path d="M32 22 h46 v34 H32z" fill="url(#a8)" rx="2"></path><path d="M40 38 h30" stroke="#fff" stroke-width="4" stroke-linecap="round"></path><path d="M44 46 l10-6 10 6" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"></path></svg>
+      </div>
+      <div class="info">
+        <div class="cat">المنزل والمكتب</div>
+        <h4>علم السعودية المكتبي</h4>
+        <div class="desc">قاعدة معدنية · قماش مطرّز</div>
+        <div class="rate">★ <span class="en">4.7</span> · <span class="en">143</span> عملية شراء</div>
+        <div class="price"><b class="en">59 <i>SAR</i></b></div>
+        <button class="add" data-add="p8">أضف للسلة</button>
+      </div>
+    </div>
+  </div>
  </div>
 </section>
 
@@ -303,7 +499,25 @@ footer{border-top:1px solid var(--line);background:#FFFFFF;padding:46px 0 26px;m
 <section id="why" style="padding-top:0">
  <div class="wrap">
    <div class="shead"><div><h2>ليش تشتري من OKs</h2><p>تجربة شراء واضحة من أول ضغطة لين باب البيت.</p></div></div>
-   <div class="feats" id="feats"></div>
+   <div class="feats" id="feats">
+
+  <div class="feat">
+    <div class="fi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#DE5605" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+    <h5>شحن سريع داخل المملكة</h5><p>توصيل ٢٤–٤٨ ساعة لأغلب المدن</p>
+  </div>
+  <div class="feat">
+    <div class="fi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#159A52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></div>
+    <h5>إرجاع خلال ١٤ يوم</h5><p>بدون أسئلة، والاستبدال مجاني</p>
+  </div>
+  <div class="feat">
+    <div class="fi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#152B5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></svg></div>
+    <h5>دفع آمن ومتعدد</h5><p>مدى · Apple Pay · تابي · تمارا</p>
+  </div>
+  <div class="feat">
+    <div class="fi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#DE5605" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"></path></svg></div>
+    <h5>كمية محدودة</h5><p>الإصدار ينتهي ولا يعاد طباعته</p>
+  </div>
+  </div>
  </div>
 </section>
 
@@ -381,12 +595,6 @@ const PRODUCTS = [
   {id:'p12', n:'ميدالية معدنية مطلية',      d:'نحاس مطلي ذهب · علبة هدية',              c:'gift', p:39,  old:55,  r:4.8, sold:488, ic:'keychain',tag:'hot'}
 ];
 
-const FEATS = [
-  {col:'#DE5605', t:'شحن سريع داخل المملكة', s:'توصيل ٢٤–٤٨ ساعة لأغلب المدن', i:'<path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>'},
-  {col:'#159A52', t:'إرجاع خلال ١٤ يوم', s:'بدون أسئلة، والاستبدال مجاني', i:'<path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/>'},
-  {col:'#152B5B', t:'دفع آمن ومتعدد', s:'مدى · Apple Pay · تابي · تمارا', i:'<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>'},
-  {col:'#DE5605', t:'كمية محدودة', s:'الإصدار ينتهي ولا يعاد طباعته', i:'<path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>'}
-];
 
 /* ========== STATE ========== */
 const VAT = 0.15, FREE_SHIP = 300, SHIP = 25, PROMO = {code:'WATANI96', off:0.15};
@@ -410,9 +618,6 @@ const byId = id => PRODUCTS.find(p => p.id === id) || BUNDLES[id];
 const BUNDLES = { bundle:{id:'bundle', n:'باقة الوطن (هودي + كاب + كوب)', d:'باقة الإصدار المحدود', p:449, old:407, ic:'bag', c:'gift'} };
 
 /* ========== RENDER: filters + feats ========== */
-document.getElementById('filters').innerHTML = CATS.map(c =>
-  `<button class="chip${c.k===filter?' on':''}" data-k="${c.k}">${c.n}</button>`).join('');
-
 document.getElementById('filters').onclick = e => {
   const b = e.target.closest('.chip'); if(!b) return;
   filter = b.dataset.k;
@@ -421,12 +626,6 @@ document.getElementById('filters').onclick = e => {
 };
 
 document.getElementById('sortSel').onchange = e => { sort = e.target.value; renderGrid(); };
-
-document.getElementById('feats').innerHTML = FEATS.map(f => `
-  <div class="feat">
-    <div class="fi"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="${f.col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${f.i}</svg></div>
-    <h5>${f.t}</h5><p>${f.s}</p>
-  </div>`).join('');
 
 /* ========== RENDER: grid ========== */
 function renderGrid(){
@@ -608,8 +807,8 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 
-/* init */
-renderGrid();
+/* init - markup is already in the page, so only re-render when favourites are stored */
+if(Object.keys(favs).length) renderGrid();
 renderCart();
 </script>
 </body></html>
