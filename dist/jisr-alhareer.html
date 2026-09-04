@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جسر الحرير — وساطة إنتاج التسويق</title>
+<meta name="description" content="جسر الحرير — وسيطك في إنتاج التسويق والفعاليات: اطلب، استلم عرض سعر مفصّل، ونتابع التنفيذ مع الموردين حتى التسليم.">
+<meta name="theme-color" content="#0A0D12">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   جسر الحرير — Silk Bridge  |  واجهة داكنة فاخرة، RTL
+   ========================================================================== */
+
+:root{
+  --bg:#0A0D12;
+  --bg-2:#0E1219;
+  --panel:#131924;
+  --panel-2:#182031;
+  --line:#232C3D;
+  --line-2:#2E394D;
+  --ink:#EDF1F7;
+  --muted:#93A1B8;
+  --muted-2:#66748C;
+  --gold:#C9A96A;
+  --gold-2:#E3C88C;
+  --gold-dim:rgba(201,169,106,.12);
+  --teal:#5FA8A0;
+  --green:#4FA96B;
+  --red:#D9636B;
+  --amber:#D9A441;
+  --radius:14px;
+  --radius-sm:10px;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --font:'IBM Plex Sans Arabic','Segoe UI',system-ui,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--font);
+  background:
+    radial-gradient(1100px 600px at 85% -10%, rgba(201,169,106,.10), transparent 60%),
+    radial-gradient(900px 500px at 10% 0%, rgba(95,168,160,.07), transparent 55%),
+    var(--bg);
+  color:var(--ink);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+input,select,textarea,button{font-family:inherit;font-size:14px}
+::selection{background:var(--gold);color:#0A0D12}
+
+/* ---------- تخطيط عام ---------- */
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.wrap-narrow{max-width:860px;margin:0 auto;padding:0 20px}
+
+/* ---------- الشريط العلوي ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(10,13,18,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .inner{display:flex;align-items:center;gap:22px;height:66px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:.2px}
+.brand .mark{
+  width:36px;height:36px;border-radius:11px;flex:0 0 36px;
+  background:linear-gradient(140deg,var(--gold),#8A6E3C);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(201,169,106,.28);
+}
+.brand .mark svg{width:20px;height:20px}
+.brand .t1{font-size:16px;line-height:1.2}
+.brand .t2{font-size:10.5px;color:var(--muted-2);letter-spacing:2px;text-transform:uppercase;line-height:1.2}
+.nav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+.nav a{
+  padding:8px 14px;border-radius:9px;font-size:13.5px;color:var(--muted);
+  border:1px solid transparent;transition:.15s;
+}
+.nav a:hover{color:var(--ink);background:var(--panel)}
+.nav a.on{color:var(--gold-2);background:var(--gold-dim);border-color:rgba(201,169,106,.25)}
+
+/* ---------- الأزرار ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 20px;border-radius:10px;border:1px solid var(--line-2);
+  background:var(--panel-2);color:var(--ink);cursor:pointer;
+  font-weight:600;font-size:14px;transition:.15s;white-space:nowrap;
+}
+.btn:hover{border-color:var(--muted-2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-gold{
+  background:linear-gradient(140deg,var(--gold-2),var(--gold));
+  color:#14100A;border-color:transparent;
+  box-shadow:0 10px 26px rgba(201,169,106,.24);
+}
+.btn-gold:hover{box-shadow:0 14px 32px rgba(201,169,106,.34)}
+.btn-ghost{background:transparent}
+.btn-sm{padding:7px 13px;font-size:12.5px;border-radius:8px}
+.btn-danger{color:var(--red);border-color:rgba(217,99,107,.35)}
+.btn-danger:hover{background:rgba(217,99,107,.10)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- الواجهة العامة (Landing) ---------- */
+.hero{padding:84px 0 70px;position:relative;overflow:hidden}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12px;letter-spacing:1.4px;color:var(--gold-2);
+  background:var(--gold-dim);border:1px solid rgba(201,169,106,.24);
+  padding:6px 14px;border-radius:99px;margin-bottom:22px;
+}
+.hero h1{font-size:clamp(30px,5vw,52px);line-height:1.25;font-weight:700;letter-spacing:-.5px}
+.hero h1 span{
+  background:linear-gradient(120deg,var(--gold-2),var(--gold),#9A7C46);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:640px;margin-top:18px}
+.hero .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.hero .stats{display:flex;gap:38px;margin-top:52px;flex-wrap:wrap}
+.hero .stats .s .n{font-size:26px;font-weight:700;color:var(--gold-2)}
+.hero .stats .s .l{font-size:12.5px;color:var(--muted-2)}
+
+.section{padding:58px 0;border-top:1px solid var(--line)}
+.section h2{font-size:24px;margin-bottom:8px}
+.section .sub{color:var(--muted);font-size:14.5px;margin-bottom:30px}
+
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+.card{
+  background:linear-gradient(160deg,var(--panel),var(--bg-2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  transition:.18s;
+}
+.card:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.card .ic{
+  width:42px;height:42px;border-radius:11px;background:var(--gold-dim);
+  border:1px solid rgba(201,169,106,.2);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:19px;
+}
+.card h3{font-size:15.5px;margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted);line-height:1.65}
+.card .tags{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:11.5px;color:var(--muted);background:var(--panel-2);
+  border:1px solid var(--line);border-radius:99px;padding:3px 10px;
+}
+
+.steps{counter-reset:st}
+.step{position:relative;padding-inline-start:56px;margin-bottom:26px}
+.step:before{
+  counter-increment:st;content:counter(st);
+  position:absolute;inset-inline-start:0;top:0;
+  width:38px;height:38px;border-radius:11px;
+  background:var(--gold-dim);border:1px solid rgba(201,169,106,.28);
+  color:var(--gold-2);font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.step h4{font-size:15px;margin-bottom:3px}
+.step p{font-size:13.5px;color:var(--muted)}
+
+/* ---------- النماذج ---------- */
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:7px}
+.field label .req{color:var(--gold)}
+.inp,select.inp,textarea.inp{
+  width:100%;padding:11px 13px;border-radius:var(--radius-sm);
+  background:var(--bg-2);border:1px solid var(--line);color:var(--ink);
+  transition:.15s;
+}
+.inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,169,106,.12)}
+textarea.inp{min-height:96px;resize:vertical;line-height:1.7}
+select.inp{cursor:pointer}
+.inp::placeholder{color:var(--muted-2)}
+.hint{font-size:11.5px;color:var(--muted-2);margin-top:6px}
+.row{display:grid;gap:14px}
+.r2{grid-template-columns:1fr 1fr}
+.r3{grid-template-columns:1fr 1fr 1fr}
+.r4{grid-template-columns:repeat(4,1fr)}
+
+.panel{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+}
+.panel + .panel{margin-top:18px}
+.panel h3{font-size:16px;margin-bottom:4px}
+.panel .psub{font-size:13px;color:var(--muted);margin-bottom:20px}
+.panel-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.panel-head h3{margin:0}
+.panel-head .spacer{margin-inline-start:auto}
+
+/* ---------- الجداول ---------- */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:680px}
+thead th{
+  background:var(--panel-2);color:var(--muted);font-weight:600;font-size:12px;
+  text-align:start;padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+tbody td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(255,255,255,.018)}
+td .cell-inp{
+  width:100%;background:transparent;border:1px solid transparent;
+  border-radius:7px;padding:7px 8px;color:var(--ink);
+}
+td .cell-inp:hover{border-color:var(--line)}
+td .cell-inp:focus{outline:none;background:var(--bg-2);border-color:var(--gold)}
+td.num,th.num{text-align:end;font-variant-numeric:tabular-nums;white-space:nowrap}
+.w-sm{width:104px}.w-md{width:132px}.w-xs{width:86px}
+table.wide{min-width:1360px}
+table.wide td:first-child,table.wide th:first-child{min-width:200px}
+table.wide td:nth-child(2){min-width:150px}
+td .cell-inp[type=number]{text-align:start}
+
+/* ---------- الحالات والشارات ---------- */
+.badge{
+  display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;
+  padding:3px 10px;border-radius:99px;border:1px solid;white-space:nowrap;
+}
+.b-new{color:var(--teal);border-color:rgba(95,168,160,.35);background:rgba(95,168,160,.10)}
+.b-work{color:var(--amber);border-color:rgba(217,164,65,.35);background:rgba(217,164,65,.10)}
+.b-sent{color:var(--gold-2);border-color:rgba(201,169,106,.35);background:var(--gold-dim)}
+.b-won{color:var(--green);border-color:rgba(79,169,107,.35);background:rgba(79,169,107,.10)}
+.b-lost{color:var(--red);border-color:rgba(217,99,107,.35);background:rgba(217,99,107,.10)}
+.b-mute{color:var(--muted);border-color:var(--line);background:var(--panel-2)}
+
+/* ---------- مساحة العمل ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.kpi{
+  background:linear-gradient(160deg,var(--panel),var(--bg-2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;
+}
+.kpi .l{font-size:12px;color:var(--muted-2)}
+.kpi .n{font-size:23px;font-weight:700;margin-top:3px;font-variant-numeric:tabular-nums}
+.kpi .n.gold{color:var(--gold-2)}
+.kpi .n.green{color:var(--green)}
+
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-bottom:24px;overflow-x:auto}
+.tabs button{
+  background:none;border:none;color:var(--muted);cursor:pointer;
+  padding:12px 16px;font-size:14px;font-weight:600;
+  border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;
+}
+.tabs button:hover{color:var(--ink)}
+.tabs button.on{color:var(--gold-2);border-bottom-color:var(--gold)}
+
+.totals{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;
+}
+.totals .t-row{display:flex;justify-content:space-between;padding:7px 0;font-size:14px}
+.totals .t-row span:last-child{font-variant-numeric:tabular-nums;font-weight:600}
+.totals .t-row.muted{color:var(--muted);font-size:13px}
+.totals .t-row.grand{
+  border-top:1px solid var(--line);margin-top:10px;padding-top:14px;
+  font-size:18px;font-weight:700;color:var(--gold-2);
+}
+.totals .t-row.profit span:last-child{color:var(--green)}
+
+.empty{text-align:center;padding:56px 20px;color:var(--muted-2)}
+.empty .e-ic{font-size:34px;margin-bottom:10px;opacity:.5}
+
+.list-item{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  background:var(--bg-2);margin-bottom:10px;transition:.15s;flex-wrap:wrap;
+}
+.list-item:hover{border-color:var(--line-2)}
+.list-item .li-main{flex:1;min-width:200px}
+.list-item .li-t{font-weight:600;font-size:14.5px}
+.list-item .li-s{font-size:12.5px;color:var(--muted);margin-top:2px}
+.list-item .li-n{font-variant-numeric:tabular-nums;font-weight:700;color:var(--gold-2);white-space:nowrap}
+
+/* ---------- القفل ---------- */
+.lock{max-width:400px;margin:70px auto;text-align:center}
+.lock .lk-ic{font-size:36px;margin-bottom:14px}
+
+/* ---------- Toast ---------- */
+#toast{
+  position:fixed;bottom:26px;inset-inline-start:26px;z-index:200;
+  display:flex;flex-direction:column;gap:10px;
+}
+.toast{
+  background:var(--panel-2);border:1px solid var(--line-2);color:var(--ink);
+  padding:12px 18px;border-radius:var(--radius-sm);box-shadow:var(--shadow);
+  font-size:13.5px;animation:tin .25s ease-out;
+}
+.toast.ok{border-inline-start:3px solid var(--green)}
+.toast.err{border-inline-start:3px solid var(--red)}
+@keyframes tin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- Modal ---------- */
+.modal-bg{
+  position:fixed;inset:0;background:rgba(5,7,10,.72);backdrop-filter:blur(4px);
+  z-index:150;display:flex;align-items:center;justify-content:center;padding:20px;
+}
+.modal{
+  background:var(--panel);border:1px solid var(--line-2);border-radius:var(--radius);
+  padding:26px;max-width:560px;width:100%;box-shadow:var(--shadow);
+  max-height:88vh;overflow:auto;
+}
+.modal h3{font-size:17px;margin-bottom:16px}
+
+/* ---------- التذييل ---------- */
+footer.site{
+  border-top:1px solid var(--line);margin-top:60px;padding:34px 0;
+  color:var(--muted-2);font-size:12.5px;
+}
+footer.site .inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- مستند الطباعة ---------- */
+#printDoc{display:none}
+
+@media print{
+  @page{size:A4;margin:14mm}
+  body{background:#fff;color:#111}
+  .topbar,footer.site,#view,#toast,.modal-bg{display:none !important}
+  #printDoc{display:block;font-size:12px;color:#111}
+  #printDoc .p-head{display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:2px solid #C9A96A;padding-bottom:12px;margin-bottom:18px}
+  #printDoc .p-brand{font-size:20px;font-weight:700;color:#1A1A1A}
+  #printDoc .p-brand small{display:block;font-size:10px;color:#777;letter-spacing:2px}
+  #printDoc .p-meta{text-align:end;font-size:11px;color:#444;line-height:1.8}
+  #printDoc h2{font-size:14px;margin:16px 0 8px;color:#1A1A1A}
+  #printDoc table{width:100%;border-collapse:collapse;font-size:11px;min-width:0}
+  #printDoc th{background:#F4F1EA;color:#333;border:1px solid #DDD6C6;padding:7px;text-align:start}
+  #printDoc td{border:1px solid #E6E1D6;padding:6px 7px;color:#222}
+  #printDoc td.num{text-align:end}
+  #printDoc .p-tot{margin-top:14px;margin-inline-start:auto;width:56%}
+  #printDoc .p-tot .r{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #EEE}
+  #printDoc .p-tot .r.g{font-size:14px;font-weight:700;border-bottom:none;border-top:2px solid #C9A96A;margin-top:6px;padding-top:9px}
+  #printDoc .p-terms{margin-top:22px;font-size:10.5px;color:#555;line-height:1.9;
+    border-top:1px solid #E6E1D6;padding-top:12px;white-space:pre-line}
+  #printDoc .p-sign{margin-top:34px;display:flex;justify-content:space-between;font-size:11px;color:#444}
+}
+
+/* ---------- الاستجابة ---------- */
+@media(max-width:980px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .r4{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .r2,.r3,.r4{grid-template-columns:1fr}
+  .topbar .inner{height:auto;padding:12px 0;flex-wrap:wrap}
+  .nav{width:100%;margin-inline-start:0}
+  .hero{padding:52px 0 42px}
+  .hero .stats{gap:24px}
+  .panel{padding:18px}
+}
+
+</style>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23C9A96A'/><path d='M6 21c4-7 16-7 20 0' stroke='%230A0D12' stroke-width='2.6' fill='none' stroke-linecap='round'/><path d='M11 21v-4M16 21v-6M21 21v-4' stroke='%230A0D12' stroke-width='2.2' stroke-linecap='round'/></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap inner">
+    <a class="brand" href="#/">
+      <span class="mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 22c5-9 19-9 24 0" stroke="#14100A" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M10 22v-5M16 22v-7M22 22v-5" stroke="#14100A" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>
+        <span class="t1" id="brandAr">جسر الحرير</span>
+        <span class="t2" id="brandEn">SILK BRIDGE</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#/">الرئيسية</a>
+      <a href="#/services">الخدمات</a>
+      <a href="#/request">اطلب عرض سعر</a>
+      <a href="#/app">مساحة العمل</a>
+    </nav>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<footer class="site">
+  <div class="wrap inner">
+    <div id="footBrand">جسر الحرير · SILK BRIDGE</div>
+    <div>وساطة إنتاج التسويق والفعاليات — البيانات محفوظة في متصفحك.</div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<div id="printDoc"></div>
+
+<script>
+/* ==========================================================================
+   جسر الحرير — البيانات الافتراضية (الهوية، الخدمات، كتالوج الأصناف)
+   عدّل الأسعار من داخل الموقع: مساحة العمل ← الأصناف
+   ========================================================================== */
+
+const DEFAULT_SETTINGS = {
+  brandAr: 'جسر الحرير',
+  brandEn: 'SILK BRIDGE',
+  tagline: 'وسيطك في إنتاج التسويق — من الفكرة إلى التسليم',
+  owner: '',
+  phone: '',
+  email: '',
+  city: 'الرياض',
+  vatNo: '',
+  crNo: '',
+  vatRate: 15,          // نسبة ضريبة القيمة المضافة %
+  defaultMargin: 20,    // هامش الوساطة الافتراضي على كل بند %
+  serviceFeeType: 'pct',// pct | fixed
+  serviceFeeValue: 0,   // رسوم إدارة المشروع
+  validityDays: 14,     // صلاحية العرض بالأيام
+  passcode: '1234',     // رمز الدخول لمساحة العمل (غيّره من الإعدادات)
+  terms: 'الأسعار بالريال السعودي وشاملة أعمال التنسيق والمتابعة مع الموردين.\nمدة التنفيذ تبدأ من تاريخ اعتماد العرض واستلام المواد النهائية (ملفات التصميم).\nشروط الدفع: 50% دفعة مقدمة عند الاعتماد، و50% عند التسليم.\nأي تعديل على المواصفات أو الكميات بعد الاعتماد يُعاد تسعيره.\nالعرض ساري خلال المدة الموضحة أعلاه.',
+  seq: { quote: 1, request: 1, po: 1 }
+};
+
+/* أقسام الخدمات — تظهر في الصفحة الرئيسية ونموذج الطلب */
+const CATEGORIES = [
+  { id:'print',   icon:'🖨️', name:'الطباعة والمطبوعات',  desc:'بروشورات، فلايرات، كروت، ملفات تعريفية، ستيكرات.', tags:['أوفست','ديجيتال','UV'] },
+  { id:'signage', icon:'🪧', name:'اللوحات والدعايات',    desc:'رول أب، بانرات، ستاندات، خلفيات مسرح، لوحات فوم.', tags:['فينيل','فلكس','أكريليك'] },
+  { id:'gifts',   icon:'🎁', name:'الهدايا الدعائية',      desc:'أقلام، أكواب، أجندات، شنط، دروع تكريم، فلاش ميموري.', tags:['طباعة شعار','حفر ليزر'] },
+  { id:'apparel', icon:'👕', name:'الملابس واليونيفورم',   desc:'تيشيرتات، كابات، جاكيتات، مراييل فرق العمل.', tags:['تطريز','سلك سكرين'] },
+  { id:'events',  icon:'🎪', name:'الفعاليات والمعارض',    desc:'أجنحة، تأثيث، تركيب وفك، تشغيل، منظمين ومضيفات.', tags:['بوث','تركيب','تشغيل'] },
+  { id:'media',   icon:'🎬', name:'الإنتاج المرئي',        desc:'تصوير فوتوغرافي وفيديو، مونتاج، موشن جرافيك، تعليق صوتي.', tags:['4K','دورن','استوديو'] },
+  { id:'design',  icon:'🎨', name:'التصميم والهوية',       desc:'هوية بصرية، تصاميم سوشيال ميديا، تصميم مطبوعات.', tags:['هوية','سوشيال'] },
+  { id:'digital', icon:'📱', name:'التسويق الرقمي',        desc:'إدارة حسابات، إعلانات ممولة، مواقع وصفحات هبوط.', tags:['ميتا','قوقل','SEO'] }
+];
+
+/* كتالوج أولي — أسعار استرشادية بالريال، حدّثها حسب موردينك */
+const SEED_ITEMS = [
+  // الطباعة
+  {cat:'print',   name:'بروشور A4 مطوي (طباعة وجهين)', unit:'نسخة', cost:2.20,  margin:25, lead:4, supplier:''},
+  {cat:'print',   name:'فلاير A5 ورق 150 جم',          unit:'نسخة', cost:0.65,  margin:30, lead:3, supplier:''},
+  {cat:'print',   name:'كرت شخصي 350 جم (علبة 100)',   unit:'علبة', cost:38,    margin:30, lead:3, supplier:''},
+  {cat:'print',   name:'ملف تعريفي 16 صفحة تجليد حراري',unit:'نسخة', cost:26,    margin:25, lead:6, supplier:''},
+  {cat:'print',   name:'ستيكر لاصق مقاس 10×10 سم',      unit:'حبة',  cost:1.10,  margin:35, lead:3, supplier:''},
+  // اللوحات
+  {cat:'signage', name:'رول أب 80×200 سم (ستاند + طباعة)',unit:'حبة',cost:135,  margin:25, lead:2, supplier:''},
+  {cat:'signage', name:'بانر فلكس مطبوع',               unit:'م²',   cost:22,    margin:30, lead:2, supplier:''},
+  {cat:'signage', name:'خلفية مسرح Backdrop 3×2.5 م',   unit:'حبة',  cost:850,   margin:22, lead:5, supplier:''},
+  {cat:'signage', name:'لوحة فوم بورد 5 ملم مطبوعة',    unit:'م²',   cost:60,    margin:28, lead:3, supplier:''},
+  {cat:'signage', name:'حرف بارز أكريليك مضيء',         unit:'حرف',  cost:180,   margin:25, lead:7, supplier:''},
+  // الهدايا
+  {cat:'gifts',   name:'قلم معدني بطباعة شعار',          unit:'حبة',  cost:9.50,  margin:35, lead:7, supplier:''},
+  {cat:'gifts',   name:'كوب سيراميك بطباعة',             unit:'حبة',  cost:14,    margin:35, lead:7, supplier:''},
+  {cat:'gifts',   name:'أجندة جلد A5 مع حفر الشعار',     unit:'حبة',  cost:38,    margin:30, lead:10,supplier:''},
+  {cat:'gifts',   name:'شنطة قماش قطن مطبوعة',           unit:'حبة',  cost:16,    margin:35, lead:8, supplier:''},
+  {cat:'gifts',   name:'درع تكريم كريستال + نقش',        unit:'حبة',  cost:95,    margin:35, lead:6, supplier:''},
+  {cat:'gifts',   name:'فلاش ميموري 32GB بطباعة',        unit:'حبة',  cost:34,    margin:32, lead:10,supplier:''},
+  // الملابس
+  {cat:'apparel', name:'تيشيرت قطن بطباعة شعار',         unit:'حبة',  cost:32,    margin:32, lead:6, supplier:''},
+  {cat:'apparel', name:'كاب مطرز',                       unit:'حبة',  cost:26,    margin:35, lead:7, supplier:''},
+  {cat:'apparel', name:'جاكيت فريق عمل مطرز',            unit:'حبة',  cost:110,   margin:28, lead:10,supplier:''},
+  // الفعاليات
+  {cat:'events',  name:'تنفيذ جناح معرض 3×3 م',          unit:'جناح', cost:7500,  margin:20, lead:14,supplier:''},
+  {cat:'events',  name:'طاولة استقبال + برانديج',        unit:'حبة',  cost:650,   margin:25, lead:5, supplier:''},
+  {cat:'events',  name:'عامل تركيب وفك (يوم)',           unit:'يوم',  cost:350,   margin:25, lead:1, supplier:''},
+  {cat:'events',  name:'مضيف/مضيفة فعالية (يوم)',        unit:'يوم',  cost:450,   margin:25, lead:3, supplier:''},
+  {cat:'events',  name:'شاشة LED للعرض (يوم)',           unit:'يوم',  cost:1800,  margin:22, lead:5, supplier:''},
+  // الإنتاج المرئي
+  {cat:'media',   name:'تصوير فوتوغرافي (نصف يوم)',      unit:'جلسة', cost:1500,  margin:28, lead:3, supplier:''},
+  {cat:'media',   name:'فيديو ترويجي 60 ثانية (تصوير ومونتاج)',unit:'فيديو',cost:9000,margin:25,lead:14,supplier:''},
+  {cat:'media',   name:'موشن جرافيك 30 ثانية',           unit:'فيديو',cost:3500,  margin:28, lead:10,supplier:''},
+  {cat:'media',   name:'تعليق صوتي احترافي',             unit:'مقطع', cost:600,   margin:35, lead:3, supplier:''},
+  {cat:'media',   name:'تصوير جوي بدرون (نصف يوم)',      unit:'جلسة', cost:2200,  margin:25, lead:5, supplier:''},
+  // التصميم
+  {cat:'design',  name:'تصميم هوية بصرية متكاملة',       unit:'مشروع',cost:6500,  margin:30, lead:14,supplier:''},
+  {cat:'design',  name:'تصميم منشور سوشيال ميديا',       unit:'تصميم',cost:120,   margin:40, lead:2, supplier:''},
+  {cat:'design',  name:'تصميم مطبوعة (بروشور/فلاير)',    unit:'تصميم',cost:450,   margin:35, lead:3, supplier:''},
+  // الرقمي
+  {cat:'digital', name:'إدارة حسابات سوشيال (شهر)',      unit:'شهر',  cost:3500,  margin:30, lead:2, supplier:''},
+  {cat:'digital', name:'إدارة حملة إعلانية ممولة (شهر)', unit:'شهر',  cost:2000,  margin:30, lead:2, supplier:''},
+  {cat:'digital', name:'صفحة هبوط Landing Page',         unit:'صفحة', cost:2800,  margin:30, lead:10,supplier:''}
+];
+
+const REQ_STATUS = {
+  new:     {label:'جديد',          cls:'b-new'},
+  pricing: {label:'قيد التسعير',   cls:'b-work'},
+  quoted:  {label:'أُرسل العرض',   cls:'b-sent'},
+  won:     {label:'مقبول',         cls:'b-won'},
+  lost:    {label:'مرفوض',         cls:'b-lost'},
+  closed:  {label:'مغلق',          cls:'b-mute'}
+};
+
+const QUOTE_STATUS = {
+  draft:  {label:'مسودة',   cls:'b-mute'},
+  sent:   {label:'مُرسل',   cls:'b-sent'},
+  won:    {label:'معتمد',   cls:'b-won'},
+  lost:   {label:'خسارة',   cls:'b-lost'}
+};
+
+const PO_STATUS = {
+  todo:    {label:'لم يُطلب',   cls:'b-mute'},
+  ordered: {label:'تم الطلب',   cls:'b-work'},
+  received:{label:'تم الاستلام',cls:'b-won'}
+};
+
+const UNITS = ['حبة','نسخة','م²','متر','علبة','يوم','شهر','مشروع','جلسة','فيديو','تصميم','صفحة','جناح','حرف','مقطع','خدمة'];
+
+</script>
+<script>
+/* ==========================================================================
+   جسر الحرير — طبقة التخزين والأدوات المساعدة
+   كل البيانات تُحفظ في متصفحك (localStorage). لا يوجد سيرفر ولا حساب.
+   ========================================================================== */
+
+const KEY = 'silkbridge.v1.';
+
+const DB = {
+  read(name, fallback){
+    try{
+      const raw = localStorage.getItem(KEY + name);
+      return raw ? JSON.parse(raw) : JSON.parse(JSON.stringify(fallback));
+    }catch(e){
+      console.warn('read failed', name, e);
+      return JSON.parse(JSON.stringify(fallback));
+    }
+  },
+  write(name, value){
+    try{
+      localStorage.setItem(KEY + name, JSON.stringify(value));
+      return true;
+    }catch(e){
+      toast('تعذّر الحفظ — قد تكون مساحة المتصفح ممتلئة أو الحفظ معطّل', 'err');
+      return false;
+    }
+  },
+  drop(name){ try{ localStorage.removeItem(KEY + name); }catch(e){} }
+};
+
+/* ---------- الإعدادات ---------- */
+function getSettings(){
+  const s = DB.read('settings', {});
+  const merged = Object.assign({}, DEFAULT_SETTINGS, s);
+  merged.seq = Object.assign({}, DEFAULT_SETTINGS.seq, s.seq || {});
+  return merged;
+}
+function saveSettings(s){ DB.write('settings', s); }
+
+/* ---------- المجموعات ---------- */
+function getItems(){
+  let items = DB.read('items', null);
+  if(!items){
+    items = SEED_ITEMS.map((it, i) => Object.assign({id:'it' + (i+1)}, it));
+    DB.write('items', items);
+  }
+  return items;
+}
+function saveItems(v){ DB.write('items', v); }
+
+const getRequests = () => DB.read('requests', []);
+const saveRequests = v => DB.write('requests', v);
+const getQuotes   = () => DB.read('quotes', []);
+const saveQuotes  = v => DB.write('quotes', v);
+const getPOs      = () => DB.read('pos', []);
+const savePOs     = v => DB.write('pos', v);
+const getSuppliers= () => DB.read('suppliers', []);
+const saveSuppliers = v => DB.write('suppliers', v);
+
+/* ---------- المعرّفات ---------- */
+function uid(prefix){
+  return (prefix || 'x') + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+}
+function nextRef(kind, prefix){
+  const s = getSettings();
+  const n = s.seq[kind] || 1;
+  s.seq[kind] = n + 1;
+  saveSettings(s);
+  const d = new Date();
+  const ym = String(d.getFullYear()).slice(2) + String(d.getMonth() + 1).padStart(2, '0');
+  return prefix + '-' + ym + '-' + String(n).padStart(3, '0');
+}
+
+/* ---------- أرقام وتنسيق ---------- */
+const num = v => { const n = parseFloat(String(v).replace(/[^\d.\-]/g, '')); return isNaN(n) ? 0 : n; };
+const r2  = v => Math.round((v + Number.EPSILON) * 100) / 100;
+
+function money(v, withCur){
+  const n = r2(num(v));
+  const s = n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  return withCur === false ? s : s + ' ر.س';
+}
+function fmtInt(v){ return Math.round(num(v)).toLocaleString('en-US'); }
+
+function today(){ return new Date().toISOString().slice(0, 10); }
+function addDays(dateStr, days){
+  const d = new Date(dateStr + 'T00:00:00');
+  d.setDate(d.getDate() + num(days));
+  return d.toISOString().slice(0, 10);
+}
+function fmtDate(s){
+  if(!s) return '—';
+  const d = new Date(s);
+  if(isNaN(d)) return s;
+  return d.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'});
+}
+
+/* ---------- HTML آمن ---------- */
+function esc(s){
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+/* ---------- حساب العرض ---------- */
+function calcQuote(q){
+  const st = getSettings();
+  let cost = 0, sell = 0;
+  const lines = (q.lines || []).map(l => {
+    const qty = num(l.qty), c = num(l.cost), m = num(l.margin);
+    const unitPrice = r2(c * (1 + m / 100));
+    const lineCost  = r2(c * qty);
+    const lineTotal = r2(unitPrice * qty);
+    cost += lineCost; sell += lineTotal;
+    return Object.assign({}, l, {unitPrice, lineCost, lineTotal});
+  });
+  cost = r2(cost); sell = r2(sell);
+
+  const fee = q.feeType === 'pct' ? r2(sell * num(q.feeValue) / 100) : r2(num(q.feeValue));
+  const delivery = r2(num(q.delivery));
+  const beforeDisc = r2(sell + fee + delivery);
+  const discount = q.discType === 'pct' ? r2(beforeDisc * num(q.discValue) / 100) : r2(num(q.discValue));
+  const subtotal = r2(beforeDisc - discount);
+  const vatRate = q.vat === false ? 0 : num(st.vatRate);
+  const vat = r2(subtotal * vatRate / 100);
+  const total = r2(subtotal + vat);
+  const profit = r2(subtotal - cost);
+  const marginPct = subtotal > 0 ? r2(profit / subtotal * 100) : 0;
+
+  return {lines, cost, sell, fee, delivery, discount, subtotal, vatRate, vat, total, profit, marginPct};
+}
+
+function emptyQuote(){
+  const st = getSettings();
+  return {
+    id: uid('q'),
+    ref: '',
+    date: today(),
+    validity: st.validityDays,
+    status: 'draft',
+    requestId: '',
+    client: {name:'', org:'', phone:'', email:'', city:''},
+    title: '',
+    lines: [],
+    feeType: st.serviceFeeType,
+    feeValue: st.serviceFeeValue,
+    delivery: 0,
+    discType: 'fixed',
+    discValue: 0,
+    vat: true,
+    notes: '',
+    terms: st.terms,
+    createdAt: new Date().toISOString()
+  };
+}
+function emptyLine(){
+  return {id: uid('l'), name:'', spec:'', qty:1, unit:'حبة', cost:0, margin:getSettings().defaultMargin, supplier:''};
+}
+
+/* ---------- نسخة احتياطية ---------- */
+function exportAll(){
+  return {
+    app:'silk-bridge', version:1, exportedAt:new Date().toISOString(),
+    settings:getSettings(), items:getItems(), suppliers:getSuppliers(),
+    requests:getRequests(), quotes:getQuotes(), pos:getPOs()
+  };
+}
+function importAll(data){
+  if(!data || data.app !== 'silk-bridge') throw new Error('الملف غير متوافق');
+  if(data.settings)  saveSettings(Object.assign({}, DEFAULT_SETTINGS, data.settings));
+  if(data.items)     saveItems(data.items);
+  if(data.suppliers) saveSuppliers(data.suppliers);
+  if(data.requests)  saveRequests(data.requests);
+  if(data.quotes)    saveQuotes(data.quotes);
+  if(data.pos)       savePOs(data.pos);
+}
+function downloadFile(filename, content, type){
+  const blob = new Blob([content], {type: type || 'application/json;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 400);
+}
+function copyText(txt){
+  const done = () => toast('تم النسخ ✓', 'ok');
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(txt).then(done, () => fallbackCopy(txt, done));
+  }else fallbackCopy(txt, done);
+}
+function fallbackCopy(txt, done){
+  const ta = document.createElement('textarea');
+  ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); done(); }catch(e){ toast('تعذّر النسخ', 'err'); }
+  ta.remove();
+}
+
+/* ---------- تنبيهات ونوافذ ---------- */
+function toast(msg, kind){
+  const box = document.getElementById('toast');
+  if(!box) return;
+  const el = document.createElement('div');
+  el.className = 'toast ' + (kind || '');
+  el.textContent = msg;
+  box.appendChild(el);
+  setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 300); }, 2800);
+}
+function modal(title, bodyHTML, onMount){
+  closeModal();
+  const bg = document.createElement('div');
+  bg.className = 'modal-bg'; bg.id = 'modalBg';
+  bg.innerHTML = '<div class="modal"><h3>' + esc(title) + '</h3>' + bodyHTML + '</div>';
+  bg.addEventListener('click', e => { if(e.target === bg) closeModal(); });
+  document.body.appendChild(bg);
+  if(onMount) onMount(bg);
+}
+function closeModal(){ const m = document.getElementById('modalBg'); if(m) m.remove(); }
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+</script>
+<script>
+/* ==========================================================================
+   جسر الحرير — التوجيه والواجهة العامة (الرئيسية + نموذج طلب عرض السعر)
+   ========================================================================== */
+
+const ACTIONS = {};
+const STATE = { unlocked:false, tab:'inbox', quoteId:null, poId:null, reqFilter:'all', catFilter:'all', q:'' };
+
+/* ---------- توزيع الأحداث ---------- */
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]');
+  if(!el) return;
+  const fn = ACTIONS[el.dataset.act];
+  if(fn){ e.preventDefault(); fn(el, e); }
+});
+document.addEventListener('change', e => {
+  const el = e.target.closest('[data-change]');
+  if(el && ACTIONS[el.dataset.change]) ACTIONS[el.dataset.change](el, e);
+});
+document.addEventListener('input', e => {
+  const el = e.target.closest('[data-input]');
+  if(el && ACTIONS[el.dataset.input]) ACTIONS[el.dataset.input](el, e);
+});
+document.addEventListener('submit', e => {
+  const el = e.target.closest('[data-submit]');
+  if(el && ACTIONS[el.dataset.submit]){ e.preventDefault(); ACTIONS[el.dataset.submit](el, e); }
+});
+
+/* ---------- التوجيه ---------- */
+function route(){ return (location.hash.replace(/^#\/?/, '') || 'home').split('?')[0]; }
+function go(path){ location.hash = '#/' + path; }
+ACTIONS.go = el => go(el.dataset.to);
+
+window.addEventListener('hashchange', render);
+window.addEventListener('DOMContentLoaded', () => { brandUp(); render(); });
+
+function brandUp(){
+  const st = getSettings();
+  document.title = st.brandAr + ' — ' + st.tagline;
+  const b1 = document.getElementById('brandAr'), b2 = document.getElementById('brandEn');
+  if(b1) b1.textContent = st.brandAr;
+  if(b2) b2.textContent = st.brandEn;
+  const f = document.getElementById('footBrand');
+  if(f) f.textContent = st.brandAr + ' · ' + st.brandEn;
+}
+
+function render(){
+  const r = route();
+  const view = document.getElementById('view');
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.classList.toggle('on', a.getAttribute('href') === '#/' + r);
+  });
+  if(r === 'request')      view.innerHTML = viewRequest();
+  else if(r === 'app')     { view.innerHTML = viewApp(); afterApp(); }
+  else if(r === 'services')view.innerHTML = viewServices();
+  else                     view.innerHTML = viewHome();
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+/* ==========================================================================
+   الصفحة الرئيسية
+   ========================================================================== */
+function viewHome(){
+  const st = getSettings();
+  const cats = CATEGORIES.map(c => `
+    <div class="card">
+      <div class="ic">${c.icon}</div>
+      <h3>${esc(c.name)}</h3>
+      <p>${esc(c.desc)}</p>
+      <div class="tags">${c.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+    </div>`).join('');
+
+  return `
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">◆ وساطة إنتاج تسويقي · ${esc(st.city || 'السعودية')}</div>
+      <h1>اطلب مرة واحدة…<br>ونحن <span>نتكفّل بالباقي</span></h1>
+      <p class="lead">${esc(st.tagline)}. تقول لنا وش تحتاج — طباعة، هدايا دعائية، جناح معرض، فيديو، أو حملة — ونرجع لك بعرض سعر واضح خلال ٢٤ ساعة، ونتابع التنفيذ مع الموردين لين التسليم.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#/request">اطلب عرض سعر</a>
+        <a class="btn btn-ghost" href="#/services">شوف الخدمات</a>
+      </div>
+      <div class="stats">
+        <div class="s"><div class="n">٢٤ ساعة</div><div class="l">متوسط الرد بعرض سعر</div></div>
+        <div class="s"><div class="n">${CATEGORIES.length}</div><div class="l">أقسام خدمات</div></div>
+        <div class="s"><div class="n">مورد واحد</div><div class="l">تتعامل معه بدل عشرة</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>ليش تتعامل معنا</h2>
+      <div class="sub">الوساطة مو بس وسيط سعر — هي إدارة كاملة للطلب من أوله لآخره.</div>
+      <div class="grid g4">
+        <div class="card"><div class="ic">🧭</div><h3>جهة اتصال واحدة</h3><p>بدل ما تلاحق مطبعة ومصنع هدايا ومصور، نجمع لك كل شيء تحت طلب واحد وفاتورة واحدة.</p></div>
+        <div class="card"><div class="ic">💰</div><h3>سعر مدروس</h3><p>نقارن أكثر من مورد قبل ما نعطيك السعر، ورسوم الوساطة واضحة ومكتوبة في العرض.</p></div>
+        <div class="card"><div class="ic">⏱️</div><h3>التزام بالمواعيد</h3><p>كل بند له مدة تنفيذ معروفة مسبقاً، ونتابع الإنتاج يومياً حتى التسليم.</p></div>
+        <div class="card"><div class="ic">🛡️</div><h3>ضمان الجودة</h3><p>نراجع العينة قبل الإنتاج الكامل، وأي عيب في التنفيذ نحن مسؤولين عن حله مع المورد.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>الخدمات</h2>
+      <div class="sub">كل اللي تحتاجه في إنتاج التسويق والفعاليات.</div>
+      <div class="grid g4">${cats}</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>كيف نشتغل</h2>
+      <div class="sub">أربع خطوات، بدون تعقيد.</div>
+      <div class="grid g2">
+        <div class="steps">
+          <div class="step"><h4>ترسل طلبك</h4><p>تعبّي النموذج أو ترسل لنا رسالة بالمطلوب والكميات والموعد.</p></div>
+          <div class="step"><h4>نسعّر ونقارن</h4><p>نطلب أسعار من موردين معتمدين ونختار الأنسب سعراً وجودة.</p></div>
+        </div>
+        <div class="steps" style="counter-reset:st 2">
+          <div class="step"><h4>تعتمد العرض</h4><p>يوصلك عرض سعر مفصّل بالأسعار والمدة والشروط، تعتمده وندخل التنفيذ.</p></div>
+          <div class="step"><h4>ننفّذ ونسلّم</h4><p>نتابع الإنتاج والتركيب والتوصيل، ونسلّمك جاهز في الموعد.</p></div>
+        </div>
+      </div>
+      <div class="cta" style="margin-top:34px">
+        <a class="btn btn-gold" href="#/request">ابدأ طلبك الآن</a>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewServices(){
+  const rows = CATEGORIES.map(c => {
+    const items = getItems().filter(i => i.cat === c.id);
+    return `
+    <div class="panel">
+      <div class="panel-head">
+        <div class="ic" style="width:38px;height:38px;border-radius:10px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center">${c.icon}</div>
+        <div><h3>${esc(c.name)}</h3><div style="font-size:13px;color:var(--muted)">${esc(c.desc)}</div></div>
+        <div class="spacer"></div>
+        <a class="btn btn-sm" href="#/request">اطلب من هذا القسم</a>
+      </div>
+      <div class="grid g3">
+        ${items.map(i => `<div class="list-item"><div class="li-main"><div class="li-t">${esc(i.name)}</div><div class="li-s">الوحدة: ${esc(i.unit)} · مدة التنفيذ ~${esc(i.lead)} يوم</div></div></div>`).join('') || '<div class="hint">لا توجد أصناف مسجلة بعد في هذا القسم.</div>'}
+      </div>
+    </div>`;
+  }).join('');
+  return `<section class="section" style="border:none"><div class="wrap">
+    <h2>دليل الخدمات</h2>
+    <div class="sub">الأصناف المتوفرة حسب القسم. الأسعار تُحدد حسب الكمية والمواصفات في عرض السعر.</div>
+    ${rows}
+  </div></section>`;
+}
+
+/* ==========================================================================
+   نموذج طلب عرض سعر
+   ========================================================================== */
+let REQ_LINES = [{id:uid('rl'), name:'', qty:1, unit:'حبة', spec:''}];
+
+function reqLineRow(l){
+  return `
+  <tr data-rl="${l.id}">
+    <td><input class="cell-inp" data-input="reqEdit" data-f="name" value="${esc(l.name)}" placeholder="مثال: رول أب 80×200"></td>
+    <td class="w-sm"><input class="cell-inp" type="number" min="1" data-input="reqEdit" data-f="qty" value="${esc(l.qty)}"></td>
+    <td class="w-md"><select class="cell-inp" data-change="reqEdit" data-f="unit">${UNITS.map(u => `<option ${u === l.unit ? 'selected' : ''}>${u}</option>`).join('')}</select></td>
+    <td><input class="cell-inp" data-input="reqEdit" data-f="spec" value="${esc(l.spec)}" placeholder="المقاس، الخامة، الألوان…"></td>
+    <td class="w-xs"><button class="btn btn-sm btn-danger" data-act="reqDel" data-id="${l.id}">حذف</button></td>
+  </tr>`;
+}
+
+function viewRequest(){
+  const st = getSettings();
+  return `
+  <section class="section" style="border:none">
+    <div class="wrap-narrow">
+      <h2>طلب عرض سعر</h2>
+      <div class="sub">عبّي المطلوب ونرجع لك بعرض سعر مفصّل. كل الحقول اللي عليها <span style="color:var(--gold)">*</span> مطلوبة.</div>
+
+      <form data-submit="reqSubmit">
+        <div class="panel">
+          <h3>بيانات مقدّم الطلب</h3>
+          <div class="psub">عشان نقدر نتواصل معك ونرسل العرض.</div>
+          <div class="row r2">
+            <div class="field"><label>الاسم <span class="req">*</span></label><input class="inp" name="name" required placeholder="الاسم الكامل"></div>
+            <div class="field"><label>الجهة / الشركة</label><input class="inp" name="org" placeholder="اسم الشركة أو الجهة"></div>
+          </div>
+          <div class="row r3">
+            <div class="field"><label>الجوال <span class="req">*</span></label><input class="inp" name="phone" required inputmode="tel" placeholder="05xxxxxxxx"></div>
+            <div class="field"><label>البريد الإلكتروني</label><input class="inp" name="email" type="email" placeholder="name@company.com"></div>
+            <div class="field"><label>المدينة</label><input class="inp" name="city" value="${esc(st.city)}"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>تفاصيل المطلوب</h3><div style="font-size:13px;color:var(--muted)">أضف كل صنف في سطر مستقل.</div></div>
+            <div class="spacer"></div>
+            <button type="button" class="btn btn-sm" data-act="reqAddFromCat">اختر من الكتالوج</button>
+            <button type="button" class="btn btn-sm" data-act="reqAdd">+ سطر جديد</button>
+          </div>
+          <div class="field"><label>عنوان الطلب / المناسبة</label><input class="inp" name="title" placeholder="مثال: مستلزمات جناح معرض الصحة ٢٠٢٦"></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>الصنف / الخدمة</th><th>الكمية</th><th>الوحدة</th><th>المواصفات</th><th></th></tr></thead>
+              <tbody id="reqLines">${REQ_LINES.map(reqLineRow).join('')}</tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>الموعد والميزانية</h3>
+          <div class="psub">تساعدنا نرشّح لك الخيار المناسب.</div>
+          <div class="row r3">
+            <div class="field"><label>تاريخ التسليم المطلوب</label><input class="inp" name="due" type="date"></div>
+            <div class="field"><label>الميزانية التقريبية (ر.س)</label><input class="inp" name="budget" type="number" min="0" placeholder="اختياري"></div>
+            <div class="field"><label>درجة الاستعجال</label>
+              <select class="inp" name="urgency"><option>عادي</option><option>مستعجل</option><option>عاجل جداً</option></select>
+            </div>
+          </div>
+          <div class="field"><label>ملاحظات إضافية</label><textarea class="inp" name="notes" placeholder="روابط ملفات التصميم، تفاصيل المكان، أي شيء يهمنا نعرفه…"></textarea></div>
+          <div class="btn-row" style="margin-top:6px">
+            <button class="btn btn-gold" type="submit">إرسال الطلب</button>
+            <a class="btn btn-ghost" href="#/">إلغاء</a>
+          </div>
+          <div class="hint">الطلب يُحفظ في هذا الجهاز وتقدر ترسله لنا مباشرة عبر واتساب أو البريد بعد الإرسال.</div>
+        </div>
+      </form>
+    </div>
+  </section>`;
+}
+
+ACTIONS.reqAdd = () => {
+  REQ_LINES.push({id:uid('rl'), name:'', qty:1, unit:'حبة', spec:''});
+  document.getElementById('reqLines').innerHTML = REQ_LINES.map(reqLineRow).join('');
+};
+ACTIONS.reqDel = el => {
+  if(REQ_LINES.length === 1) return toast('لازم يكون فيه سطر واحد على الأقل');
+  REQ_LINES = REQ_LINES.filter(l => l.id !== el.dataset.id);
+  document.getElementById('reqLines').innerHTML = REQ_LINES.map(reqLineRow).join('');
+};
+ACTIONS.reqEdit = el => {
+  const id = el.closest('[data-rl]').dataset.rl;
+  const l = REQ_LINES.find(x => x.id === id);
+  if(l) l[el.dataset.f] = el.value;
+};
+ACTIONS.reqAddFromCat = () => {
+  const items = getItems();
+  const body = `
+    <div class="field"><label>ابحث في الكتالوج</label>
+      <input class="inp" id="catSearch" placeholder="اكتب اسم الصنف…"></div>
+    <div id="catResults" style="max-height:320px;overflow:auto"></div>
+    <div class="btn-row" style="margin-top:16px"><button class="btn" data-act="closeModal">إغلاق</button></div>`;
+  modal('اختر من الكتالوج', body, bg => {
+    const draw = q => {
+      const list = items.filter(i => !q || i.name.includes(q));
+      bg.querySelector('#catResults').innerHTML = list.map(i => `
+        <div class="list-item">
+          <div class="li-main"><div class="li-t">${esc(i.name)}</div>
+            <div class="li-s">${esc((CATEGORIES.find(c => c.id === i.cat) || {}).name || '')} · ${esc(i.unit)}</div></div>
+          <button class="btn btn-sm" data-act="reqPick" data-name="${esc(i.name)}" data-unit="${esc(i.unit)}">إضافة</button>
+        </div>`).join('') || '<div class="hint">لا توجد نتائج.</div>';
+    };
+    draw('');
+    bg.querySelector('#catSearch').addEventListener('input', e => draw(e.target.value.trim()));
+  });
+};
+ACTIONS.reqPick = el => {
+  const blank = REQ_LINES.find(l => !l.name);
+  if(blank){ blank.name = el.dataset.name; blank.unit = el.dataset.unit; }
+  else REQ_LINES.push({id:uid('rl'), name:el.dataset.name, qty:1, unit:el.dataset.unit, spec:''});
+  document.getElementById('reqLines').innerHTML = REQ_LINES.map(reqLineRow).join('');
+  toast('أُضيف الصنف ✓', 'ok');
+};
+ACTIONS.closeModal = () => closeModal();
+
+ACTIONS.reqSubmit = form => {
+  const f = Object.fromEntries(new FormData(form).entries());
+  const lines = REQ_LINES.filter(l => String(l.name).trim());
+  if(!lines.length) return toast('أضف صنف واحد على الأقل', 'err');
+
+  const req = {
+    id: uid('r'),
+    ref: nextRef('request', 'RQ'),
+    createdAt: new Date().toISOString(),
+    status: 'new',
+    client: {name:f.name, org:f.org, phone:f.phone, email:f.email, city:f.city},
+    title: f.title || lines[0].name,
+    lines: lines.map(l => ({name:l.name, qty:num(l.qty) || 1, unit:l.unit, spec:l.spec})),
+    due: f.due, budget: num(f.budget), urgency: f.urgency, notes: f.notes,
+    quoteId: ''
+  };
+  const all = getRequests(); all.unshift(req); saveRequests(all);
+  REQ_LINES = [{id:uid('rl'), name:'', qty:1, unit:'حبة', spec:''}];
+  document.getElementById('view').innerHTML = viewRequestDone(req);
+  window.scrollTo({top:0});
+};
+
+function requestText(req){
+  const st = getSettings();
+  const L = req.lines.map((l, i) => `${i + 1}. ${l.name} — ${l.qty} ${l.unit}${l.spec ? ' (' + l.spec + ')' : ''}`).join('\n');
+  return `طلب عرض سعر — ${st.brandAr}
+رقم الطلب: ${req.ref}
+التاريخ: ${fmtDate(req.createdAt)}
+
+المرسل: ${req.client.name}${req.client.org ? ' — ' + req.client.org : ''}
+الجوال: ${req.client.phone}${req.client.email ? '\nالبريد: ' + req.client.email : ''}
+المدينة: ${req.client.city || '—'}
+
+الموضوع: ${req.title}
+المطلوب:
+${L}
+
+التسليم المطلوب: ${req.due ? fmtDate(req.due) : 'غير محدد'}
+الاستعجال: ${req.urgency || 'عادي'}${req.budget ? '\nالميزانية التقريبية: ' + money(req.budget) : ''}${req.notes ? '\nملاحظات: ' + req.notes : ''}`;
+}
+
+function viewRequestDone(req){
+  const st = getSettings();
+  const txt = requestText(req);
+  const wa = st.phone ? 'https://wa.me/' + String(st.phone).replace(/\D/g, '') + '?text=' + encodeURIComponent(txt) : '';
+  const mail = st.email ? 'mailto:' + st.email + '?subject=' + encodeURIComponent('طلب عرض سعر ' + req.ref) + '&body=' + encodeURIComponent(txt) : '';
+  return `
+  <section class="section" style="border:none">
+    <div class="wrap-narrow">
+      <div class="panel" style="text-align:center">
+        <div style="font-size:42px">✅</div>
+        <h3 style="font-size:20px;margin-top:8px">تم استلام طلبك</h3>
+        <div class="psub">رقم الطلب <b style="color:var(--gold-2)">${esc(req.ref)}</b> — احتفظ به للمتابعة.</div>
+        <div class="btn-row" style="justify-content:center">
+          ${wa ? `<a class="btn btn-gold" href="${wa}" target="_blank" rel="noopener">إرسال عبر واتساب</a>` : ''}
+          ${mail ? `<a class="btn" href="${mail}">إرسال بالبريد</a>` : ''}
+          <button class="btn" data-act="copyReq" data-id="${req.id}">نسخ نص الطلب</button>
+          <a class="btn btn-ghost" href="#/">الرئيسية</a>
+        </div>
+        ${(!wa && !mail) ? '<div class="hint">أضف رقم الجوال والبريد من إعدادات مساحة العمل لتفعيل أزرار الإرسال المباشر.</div>' : ''}
+      </div>
+      <div class="panel">
+        <h3>ملخص الطلب</h3>
+        <div class="table-wrap">
+          <table><thead><tr><th>#</th><th>الصنف</th><th class="num">الكمية</th><th>الوحدة</th><th>المواصفات</th></tr></thead>
+          <tbody>${req.lines.map((l, i) => `<tr><td>${i + 1}</td><td>${esc(l.name)}</td><td class="num">${fmtInt(l.qty)}</td><td>${esc(l.unit)}</td><td>${esc(l.spec) || '—'}</td></tr>`).join('')}</tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+ACTIONS.copyReq = el => {
+  const req = getRequests().find(r => r.id === el.dataset.id);
+  if(req) copyText(requestText(req));
+};
+
+</script>
+<script>
+/* ==========================================================================
+   جسر الحرير — مساحة عمل الوسيط
+   الطلبات · بناء عروض الأسعار · قائمة التسوق/الشراء · الأصناف · الإعدادات
+   ========================================================================== */
+
+/* ---------- البوابة ---------- */
+function viewApp(){
+  if(!STATE.unlocked) return viewLock();
+  return `
+  <section class="section" style="border:none;padding-top:34px">
+    <div class="wrap">
+      ${kpiRow()}
+      <div class="tabs">
+        ${tabBtn('inbox','الطلبات')}
+        ${tabBtn('quotes','عروض الأسعار')}
+        ${tabBtn('buy','قائمة التسوق')}
+        ${tabBtn('catalog','الأصناف والموردين')}
+        ${tabBtn('settings','الإعدادات')}
+      </div>
+      <div id="tabBody">${tabBody()}</div>
+    </div>
+  </section>`;
+}
+function tabBtn(id, label){
+  const n = id === 'inbox' ? getRequests().filter(r => r.status === 'new').length : 0;
+  return `<button class="${STATE.tab === id ? 'on' : ''}" data-act="tab" data-id="${id}">${label}${n ? ' <span class="badge b-new" style="margin-inline-start:6px">' + n + '</span>' : ''}</button>`;
+}
+ACTIONS.tab = el => { STATE.tab = el.dataset.id; STATE.quoteId = null; STATE.poId = null; render(); };
+
+function viewLock(){
+  return `
+  <div class="lock">
+    <div class="panel">
+      <div class="lk-ic">🔐</div>
+      <h3>مساحة العمل</h3>
+      <div class="psub">هذه المساحة خاصة بالوسيط. أدخل رمز الدخول.</div>
+      <form data-submit="unlock">
+        <div class="field"><input class="inp" name="code" type="password" placeholder="رمز الدخول" autofocus style="text-align:center;letter-spacing:6px"></div>
+        <button class="btn btn-gold" style="width:100%">دخول</button>
+      </form>
+      <div class="hint">الرمز الافتراضي 1234 — غيّره من الإعدادات بعد الدخول.</div>
+    </div>
+  </div>`;
+}
+ACTIONS.unlock = form => {
+  const code = new FormData(form).get('code');
+  if(String(code) === String(getSettings().passcode)){ STATE.unlocked = true; render(); }
+  else toast('رمز غير صحيح', 'err');
+};
+
+/* ---------- مؤشرات سريعة ---------- */
+function kpiRow(){
+  const reqs = getRequests(), quotes = getQuotes();
+  const newReqs = reqs.filter(r => r.status === 'new').length;
+  const open = quotes.filter(q => q.status === 'draft' || q.status === 'sent');
+  const openVal = open.reduce((s, q) => s + calcQuote(q).total, 0);
+  const won = quotes.filter(q => q.status === 'won');
+  const profit = won.reduce((s, q) => s + calcQuote(q).profit, 0);
+  return `<div class="kpis">
+    <div class="kpi"><div class="l">طلبات جديدة</div><div class="n">${newReqs}</div></div>
+    <div class="kpi"><div class="l">عروض مفتوحة</div><div class="n">${open.length}</div></div>
+    <div class="kpi"><div class="l">قيمة العروض المفتوحة</div><div class="n gold">${money(openVal)}</div></div>
+    <div class="kpi"><div class="l">أرباح العروض المعتمدة</div><div class="n green">${money(profit)}</div></div>
+  </div>`;
+}
+
+function tabBody(){
+  if(STATE.tab === 'quotes')   return STATE.quoteId ? quoteEditor() : quotesList();
+  if(STATE.tab === 'buy')      return STATE.poId ? poEditor() : poList();
+  if(STATE.tab === 'catalog')  return catalogTab();
+  if(STATE.tab === 'settings') return settingsTab();
+  return inboxTab();
+}
+function repaint(){ const b = document.getElementById('tabBody'); if(b) b.innerHTML = tabBody(); }
+function afterApp(){}
+
+/* ==========================================================================
+   ١) الطلبات
+   ========================================================================== */
+function inboxTab(){
+  const all = getRequests();
+  const f = STATE.reqFilter;
+  const q = STATE.q.trim();
+  let list = f === 'all' ? all : all.filter(r => r.status === f);
+  if(q) list = list.filter(r => (r.ref + ' ' + r.title + ' ' + r.client.name + ' ' + (r.client.org || '')).includes(q));
+
+  const chips = ['all'].concat(Object.keys(REQ_STATUS)).map(k => {
+    const label = k === 'all' ? 'الكل' : REQ_STATUS[k].label;
+    const n = k === 'all' ? all.length : all.filter(r => r.status === k).length;
+    return `<button class="btn btn-sm ${STATE.reqFilter === k ? 'btn-gold' : 'btn-ghost'}" data-act="reqFilter" data-id="${k}">${label} (${n})</button>`;
+  }).join('');
+
+  const rows = list.map(r => `
+    <div class="list-item">
+      <div class="li-main">
+        <div class="li-t">${esc(r.title)} <span class="badge ${REQ_STATUS[r.status].cls}">${REQ_STATUS[r.status].label}</span></div>
+        <div class="li-s">${esc(r.ref)} · ${esc(r.client.name)}${r.client.org ? ' — ' + esc(r.client.org) : ''} · ${esc(r.client.phone || '')} · ${r.lines.length} بند · ${fmtDate(r.createdAt)}${r.due ? ' · التسليم ' + fmtDate(r.due) : ''}</div>
+      </div>
+      ${r.budget ? `<div class="li-n">${money(r.budget)}</div>` : ''}
+      <div class="btn-row">
+        <button class="btn btn-sm" data-act="reqView" data-id="${r.id}">تفاصيل</button>
+        <button class="btn btn-sm btn-gold" data-act="reqToQuote" data-id="${r.id}">${r.quoteId ? 'فتح العرض' : 'حوّل لعرض سعر'}</button>
+        <select class="inp btn-sm" style="width:130px;padding:6px 8px" data-change="reqStatus" data-id="${r.id}">
+          ${Object.keys(REQ_STATUS).map(k => `<option value="${k}" ${r.status === k ? 'selected' : ''}>${REQ_STATUS[k].label}</option>`).join('')}
+        </select>
+        <button class="btn btn-sm btn-danger" data-act="reqRemove" data-id="${r.id}">✕</button>
+      </div>
+    </div>`).join('');
+
+  return `
+  <div class="panel">
+    <div class="panel-head">
+      <h3>الطلبات الواردة</h3>
+      <div class="spacer"></div>
+      <input class="inp" style="width:200px" placeholder="بحث…" value="${esc(STATE.q)}" data-input="reqSearch">
+      <a class="btn btn-sm" href="#/request">+ تسجيل طلب يدوي</a>
+    </div>
+    <div class="btn-row" style="margin-bottom:18px">${chips}</div>
+    ${rows || `<div class="empty"><div class="e-ic">📥</div>لا توجد طلبات ${f === 'all' ? 'بعد' : 'بهذه الحالة'}.<br><span class="hint">أي طلب يُرسل من نموذج الموقع يظهر هنا مباشرة.</span></div>`}
+  </div>`;
+}
+ACTIONS.reqFilter = el => { STATE.reqFilter = el.dataset.id; repaint(); };
+ACTIONS.reqSearch = el => { STATE.q = el.value; const b = document.getElementById('tabBody'); const pos = el.selectionStart; b.innerHTML = tabBody(); const n = b.querySelector('[data-input="reqSearch"]'); if(n){ n.focus(); n.setSelectionRange(pos, pos); } };
+ACTIONS.reqStatus = el => {
+  const all = getRequests(); const r = all.find(x => x.id === el.dataset.id);
+  if(r){ r.status = el.value; saveRequests(all); repaint(); toast('تم تحديث الحالة ✓', 'ok'); }
+};
+ACTIONS.reqRemove = el => {
+  if(!confirm('حذف الطلب نهائياً؟')) return;
+  saveRequests(getRequests().filter(r => r.id !== el.dataset.id));
+  repaint(); toast('تم الحذف', 'ok');
+};
+ACTIONS.reqView = el => {
+  const r = getRequests().find(x => x.id === el.dataset.id);
+  if(!r) return;
+  modal('الطلب ' + r.ref, `
+    <div class="row r2">
+      <div><div class="hint">العميل</div><b>${esc(r.client.name)}</b><div class="hint">${esc(r.client.org || '')}</div></div>
+      <div><div class="hint">التواصل</div><b>${esc(r.client.phone || '—')}</b><div class="hint">${esc(r.client.email || '')}</div></div>
+    </div>
+    <div class="row r3" style="margin-top:14px">
+      <div><div class="hint">المدينة</div><b>${esc(r.client.city || '—')}</b></div>
+      <div><div class="hint">التسليم المطلوب</div><b>${r.due ? fmtDate(r.due) : '—'}</b></div>
+      <div><div class="hint">الاستعجال</div><b>${esc(r.urgency || 'عادي')}</b></div>
+    </div>
+    <div class="table-wrap" style="margin-top:18px">
+      <table><thead><tr><th>الصنف</th><th class="num">الكمية</th><th>الوحدة</th><th>المواصفات</th></tr></thead>
+      <tbody>${r.lines.map(l => `<tr><td>${esc(l.name)}</td><td class="num">${fmtInt(l.qty)}</td><td>${esc(l.unit)}</td><td>${esc(l.spec) || '—'}</td></tr>`).join('')}</tbody></table>
+    </div>
+    ${r.notes ? `<div style="margin-top:14px"><div class="hint">ملاحظات</div>${esc(r.notes)}</div>` : ''}
+    <div class="btn-row" style="margin-top:18px">
+      <button class="btn btn-gold" data-act="reqToQuote" data-id="${r.id}">تحويل إلى عرض سعر</button>
+      <button class="btn" data-act="copyReq" data-id="${r.id}">نسخ النص</button>
+      <button class="btn btn-ghost" data-act="closeModal">إغلاق</button>
+    </div>`);
+};
+
+/* تحويل الطلب إلى عرض سعر مع تعبئة التكاليف من الكتالوج */
+ACTIONS.reqToQuote = el => {
+  closeModal();
+  const reqs = getRequests(); const r = reqs.find(x => x.id === el.dataset.id);
+  if(!r) return;
+  const quotes = getQuotes();
+  if(r.quoteId && quotes.some(q => q.id === r.quoteId)){
+    STATE.tab = 'quotes'; STATE.quoteId = r.quoteId; render(); return;
+  }
+  const items = getItems();
+  const q = emptyQuote();
+  q.ref = nextRef('quote', 'QT');
+  q.requestId = r.id;
+  q.client = Object.assign({}, r.client);
+  q.title = r.title;
+  q.lines = r.lines.map(l => {
+    const it = items.find(i => i.name === l.name);
+    return {
+      id: uid('l'), name: l.name, spec: l.spec || '',
+      qty: num(l.qty) || 1, unit: l.unit || (it ? it.unit : 'حبة'),
+      cost: it ? it.cost : 0, margin: it ? it.margin : getSettings().defaultMargin,
+      supplier: it ? it.supplier : ''
+    };
+  });
+  quotes.unshift(q); saveQuotes(quotes);
+  r.quoteId = q.id; r.status = 'pricing'; saveRequests(reqs);
+  STATE.tab = 'quotes'; STATE.quoteId = q.id; render();
+  toast('تم إنشاء العرض ' + q.ref + ' — عبّي التكاليف ✓', 'ok');
+};
+
+/* ==========================================================================
+   ٢) عروض الأسعار
+   ========================================================================== */
+function quotesList(){
+  const quotes = getQuotes();
+  const rows = quotes.map(q => {
+    const c = calcQuote(q);
+    return `<div class="list-item">
+      <div class="li-main">
+        <div class="li-t">${esc(q.title || 'عرض بدون عنوان')} <span class="badge ${QUOTE_STATUS[q.status].cls}">${QUOTE_STATUS[q.status].label}</span></div>
+        <div class="li-s">${esc(q.ref)} · ${esc(q.client.name || '—')}${q.client.org ? ' — ' + esc(q.client.org) : ''} · ${q.lines.length} بند · ${fmtDate(q.date)} · ربح ${money(c.profit)} (${c.marginPct}%)</div>
+      </div>
+      <div class="li-n">${money(c.total)}</div>
+      <div class="btn-row">
+        <button class="btn btn-sm btn-gold" data-act="qOpen" data-id="${q.id}">فتح</button>
+        <button class="btn btn-sm" data-act="qPrint" data-id="${q.id}">طباعة</button>
+        <button class="btn btn-sm btn-danger" data-act="qDelete" data-id="${q.id}">✕</button>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="panel">
+    <div class="panel-head"><h3>عروض الأسعار</h3><div class="spacer"></div>
+      <button class="btn btn-sm btn-gold" data-act="qNew">+ عرض جديد</button></div>
+    ${rows || '<div class="empty"><div class="e-ic">📄</div>ما عندك عروض بعد.<br><span class="hint">ابدأ من طلب وارد أو أنشئ عرضاً جديداً.</span></div>'}
+  </div>`;
+}
+ACTIONS.qNew = () => {
+  const q = emptyQuote(); q.ref = nextRef('quote', 'QT'); q.lines = [emptyLine()];
+  const all = getQuotes(); all.unshift(q); saveQuotes(all);
+  STATE.quoteId = q.id; repaint();
+};
+ACTIONS.qOpen = el => { STATE.quoteId = el.dataset.id; repaint(); };
+ACTIONS.qBack = () => { STATE.quoteId = null; repaint(); };
+ACTIONS.qDelete = el => {
+  if(!confirm('حذف العرض نهائياً؟')) return;
+  saveQuotes(getQuotes().filter(q => q.id !== el.dataset.id));
+  STATE.quoteId = null; repaint(); toast('تم الحذف', 'ok');
+};
+
+function curQuote(){ return getQuotes().find(q => q.id === STATE.quoteId); }
+function saveQuote(q){
+  const all = getQuotes(); const i = all.findIndex(x => x.id === q.id);
+  if(i > -1) all[i] = q; else all.unshift(q);
+  saveQuotes(all);
+}
+
+function qLineRow(l, c){
+  const cl = c.lines.find(x => x.id === l.id) || {unitPrice:0, lineTotal:0};
+  return `<tr data-ql="${l.id}">
+    <td><input class="cell-inp" data-input="qLine" data-f="name" value="${esc(l.name)}" placeholder="اسم الصنف"></td>
+    <td><input class="cell-inp" data-input="qLine" data-f="spec" value="${esc(l.spec)}" placeholder="المواصفات"></td>
+    <td class="w-xs"><input class="cell-inp" type="number" min="0" step="1" data-input="qLine" data-f="qty" value="${esc(l.qty)}"></td>
+    <td class="w-md"><select class="cell-inp" data-change="qLine" data-f="unit">${UNITS.map(u => `<option ${u === l.unit ? 'selected' : ''}>${u}</option>`).join('')}</select></td>
+    <td class="w-sm"><input class="cell-inp" type="number" min="0" step="0.01" data-input="qLine" data-f="cost" value="${esc(l.cost)}"></td>
+    <td class="w-xs"><input class="cell-inp" type="number" min="0" step="1" data-input="qLine" data-f="margin" value="${esc(l.margin)}"></td>
+    <td class="num" data-cell="unit">${money(cl.unitPrice, false)}</td>
+    <td class="num" data-cell="total">${money(cl.lineTotal, false)}</td>
+    <td class="w-md"><input class="cell-inp" data-input="qLine" data-f="supplier" value="${esc(l.supplier)}" placeholder="المورد"></td>
+    <td class="w-xs"><button class="btn btn-sm btn-danger" data-act="qLineDel" data-id="${l.id}">✕</button></td>
+  </tr>`;
+}
+
+function quoteEditor(){
+  const q = curQuote(); if(!q) return quotesList();
+  const c = calcQuote(q);
+  const st = getSettings();
+  return `
+  <div class="panel">
+    <div class="panel-head">
+      <button class="btn btn-sm btn-ghost" data-act="qBack">← رجوع</button>
+      <h3>${esc(q.ref)}</h3>
+      <span class="badge ${QUOTE_STATUS[q.status].cls}">${QUOTE_STATUS[q.status].label}</span>
+      <div class="spacer"></div>
+      <select class="inp btn-sm" style="width:130px;padding:7px 9px" data-change="qField" data-f="status">
+        ${Object.keys(QUOTE_STATUS).map(k => `<option value="${k}" ${q.status === k ? 'selected' : ''}>${QUOTE_STATUS[k].label}</option>`).join('')}
+      </select>
+      <button class="btn btn-sm" data-act="qPrint" data-id="${q.id}">طباعة / PDF</button>
+      <button class="btn btn-sm" data-act="qCopy" data-id="${q.id}">نسخ للواتساب</button>
+      <button class="btn btn-sm" data-act="qCsv" data-id="${q.id}">CSV</button>
+      <button class="btn btn-sm btn-gold" data-act="qToPO" data-id="${q.id}">تحويل لقائمة شراء</button>
+    </div>
+
+    <div class="row r4">
+      <div class="field"><label>عنوان العرض</label><input class="inp" data-input="qField" data-f="title" value="${esc(q.title)}"></div>
+      <div class="field"><label>التاريخ</label><input class="inp" type="date" data-input="qField" data-f="date" value="${esc(q.date)}"></div>
+      <div class="field"><label>صلاحية العرض (يوم)</label><input class="inp" type="number" min="1" data-input="qField" data-f="validity" value="${esc(q.validity)}"></div>
+      <div class="field"><label>ينتهي في</label><input class="inp" value="${fmtDate(addDays(q.date, q.validity))}" disabled></div>
+    </div>
+    <div class="row r4">
+      <div class="field"><label>اسم العميل</label><input class="inp" data-input="qClient" data-f="name" value="${esc(q.client.name)}"></div>
+      <div class="field"><label>الجهة</label><input class="inp" data-input="qClient" data-f="org" value="${esc(q.client.org)}"></div>
+      <div class="field"><label>الجوال</label><input class="inp" data-input="qClient" data-f="phone" value="${esc(q.client.phone)}"></div>
+      <div class="field"><label>المدينة</label><input class="inp" data-input="qClient" data-f="city" value="${esc(q.client.city)}"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <div><h3>بنود العرض</h3><div style="font-size:13px;color:var(--muted)">اكتب تكلفة المورد وهامشك — سعر البيع يُحسب تلقائياً.</div></div>
+      <div class="spacer"></div>
+      <button class="btn btn-sm" data-act="qFromCat">اختر من الكتالوج</button>
+      <button class="btn btn-sm" data-act="qLineAdd">+ بند</button>
+      <button class="btn btn-sm" data-act="qMarginAll">تطبيق هامش موحّد</button>
+    </div>
+    <div class="table-wrap">
+      <table class="wide">
+        <thead><tr>
+          <th>الصنف</th><th>المواصفات</th><th>الكمية</th><th>الوحدة</th>
+          <th>تكلفة الوحدة</th><th>هامش %</th><th class="num">سعر الوحدة</th><th class="num">الإجمالي</th><th>المورد</th><th></th>
+        </tr></thead>
+        <tbody id="qLines">${q.lines.map(l => qLineRow(l, c)).join('')}</tbody>
+      </table>
+    </div>
+    ${q.lines.length ? '' : '<div class="empty"><div class="e-ic">🧾</div>أضف أول بند للعرض.</div>'}
+  </div>
+
+  <div class="grid g2" style="align-items:start">
+    <div class="panel">
+      <h3>الرسوم والخصم</h3>
+      <div class="psub">رسوم إدارة المشروع تُضاف فوق أسعار البنود.</div>
+      <div class="row r2">
+        <div class="field"><label>نوع رسوم الخدمة</label>
+          <select class="inp" data-change="qField" data-f="feeType">
+            <option value="pct" ${q.feeType === 'pct' ? 'selected' : ''}>نسبة % من قيمة البنود</option>
+            <option value="fixed" ${q.feeType === 'fixed' ? 'selected' : ''}>مبلغ ثابت</option>
+          </select></div>
+        <div class="field"><label>قيمة الرسوم</label><input class="inp" type="number" min="0" step="0.01" data-input="qField" data-f="feeValue" value="${esc(q.feeValue)}"></div>
+      </div>
+      <div class="row r2">
+        <div class="field"><label>شحن وتوصيل (ر.س)</label><input class="inp" type="number" min="0" step="0.01" data-input="qField" data-f="delivery" value="${esc(q.delivery)}"></div>
+        <div class="field"><label>ضريبة القيمة المضافة</label>
+          <select class="inp" data-change="qField" data-f="vat">
+            <option value="1" ${q.vat !== false ? 'selected' : ''}>تُحتسب ${st.vatRate}%</option>
+            <option value="0" ${q.vat === false ? 'selected' : ''}>بدون ضريبة</option>
+          </select></div>
+      </div>
+      <div class="row r2">
+        <div class="field"><label>نوع الخصم</label>
+          <select class="inp" data-change="qField" data-f="discType">
+            <option value="fixed" ${q.discType === 'fixed' ? 'selected' : ''}>مبلغ ثابت</option>
+            <option value="pct" ${q.discType === 'pct' ? 'selected' : ''}>نسبة %</option>
+          </select></div>
+        <div class="field"><label>قيمة الخصم</label><input class="inp" type="number" min="0" step="0.01" data-input="qField" data-f="discValue" value="${esc(q.discValue)}"></div>
+      </div>
+      <div class="field"><label>ملاحظات تظهر في العرض</label><textarea class="inp" data-input="qField" data-f="notes">${esc(q.notes)}</textarea></div>
+      <div class="field"><label>الشروط والأحكام</label><textarea class="inp" style="min-height:130px" data-input="qField" data-f="terms">${esc(q.terms)}</textarea></div>
+    </div>
+
+    <div class="panel">
+      <h3>الملخص المالي</h3>
+      <div class="psub">أرقام التكلفة والربح لك أنت فقط — لا تظهر للعميل في الطباعة.</div>
+      <div id="qTotals">${totalsBox(c)}</div>
+    </div>
+  </div>`;
+}
+
+function totalsBox(c){
+  return `<div class="totals">
+    <div class="t-row muted"><span>تكلفة الموردين (سرّي)</span><span>${money(c.cost)}</span></div>
+    <div class="t-row"><span>إجمالي البنود</span><span>${money(c.sell)}</span></div>
+    <div class="t-row"><span>رسوم الخدمة</span><span>${money(c.fee)}</span></div>
+    <div class="t-row"><span>شحن وتوصيل</span><span>${money(c.delivery)}</span></div>
+    <div class="t-row"><span>الخصم</span><span>- ${money(c.discount)}</span></div>
+    <div class="t-row"><span>الإجمالي قبل الضريبة</span><span>${money(c.subtotal)}</span></div>
+    <div class="t-row"><span>ضريبة القيمة المضافة (${c.vatRate}%)</span><span>${money(c.vat)}</span></div>
+    <div class="t-row grand"><span>الإجمالي شامل الضريبة</span><span>${money(c.total)}</span></div>
+    <div class="t-row profit" style="margin-top:10px"><span>ربحك المتوقع</span><span>${money(c.profit)}</span></div>
+    <div class="t-row muted"><span>نسبة الربح من قيمة العرض</span><span>${c.marginPct}%</span></div>
+  </div>`;
+}
+
+/* تعديلات حيّة بدون إعادة رسم كامل */
+function liveRefresh(q){
+  const c = calcQuote(q);
+  const box = document.getElementById('qTotals');
+  if(box) box.innerHTML = totalsBox(c);
+  c.lines.forEach(l => {
+    const tr = document.querySelector('[data-ql="' + l.id + '"]');
+    if(!tr) return;
+    tr.querySelector('[data-cell="unit"]').textContent = money(l.unitPrice, false);
+    tr.querySelector('[data-cell="total"]').textContent = money(l.lineTotal, false);
+  });
+}
+ACTIONS.qLine = el => {
+  const q = curQuote(); if(!q) return;
+  const id = el.closest('[data-ql]').dataset.ql;
+  const l = q.lines.find(x => x.id === id); if(!l) return;
+  const f = el.dataset.f;
+  l[f] = (f === 'qty' || f === 'cost' || f === 'margin') ? num(el.value) : el.value;
+  saveQuote(q); liveRefresh(q);
+};
+ACTIONS.qField = el => {
+  const q = curQuote(); if(!q) return;
+  const f = el.dataset.f;
+  if(f === 'vat') q.vat = el.value === '1';
+  else if(['feeValue','delivery','discValue','validity'].includes(f)) q[f] = num(el.value);
+  else q[f] = el.value;
+  saveQuote(q);
+  if(f === 'status' || f === 'date' || f === 'validity'){ repaint(); }
+  else liveRefresh(q);
+};
+ACTIONS.qClient = el => {
+  const q = curQuote(); if(!q) return;
+  q.client[el.dataset.f] = el.value; saveQuote(q);
+};
+ACTIONS.qLineAdd = () => {
+  const q = curQuote(); q.lines.push(emptyLine()); saveQuote(q); repaint();
+};
+ACTIONS.qLineDel = el => {
+  const q = curQuote(); q.lines = q.lines.filter(l => l.id !== el.dataset.id); saveQuote(q); repaint();
+};
+ACTIONS.qMarginAll = () => {
+  const q = curQuote();
+  modal('تطبيق هامش موحّد', `
+    <div class="field"><label>الهامش % على كل البنود</label>
+      <input class="inp" id="mAll" type="number" min="0" step="1" value="${getSettings().defaultMargin}"></div>
+    <div class="btn-row"><button class="btn btn-gold" data-act="qMarginApply">تطبيق</button>
+    <button class="btn btn-ghost" data-act="closeModal">إلغاء</button></div>`);
+};
+ACTIONS.qMarginApply = () => {
+  const v = num(document.getElementById('mAll').value);
+  const q = curQuote(); q.lines.forEach(l => l.margin = v); saveQuote(q);
+  closeModal(); repaint(); toast('تم تطبيق الهامش ✓', 'ok');
+};
+ACTIONS.qFromCat = () => {
+  const items = getItems();
+  modal('إضافة من الكتالوج', `
+    <div class="field"><input class="inp" id="qSearch" placeholder="ابحث عن صنف…"></div>
+    <div id="qResults" style="max-height:340px;overflow:auto"></div>
+    <div class="btn-row" style="margin-top:14px"><button class="btn" data-act="closeModal">إغلاق</button></div>`, bg => {
+    const draw = s => {
+      bg.querySelector('#qResults').innerHTML = items.filter(i => !s || i.name.includes(s)).map(i => `
+        <div class="list-item"><div class="li-main"><div class="li-t">${esc(i.name)}</div>
+          <div class="li-s">تكلفة ${money(i.cost)} · هامش ${i.margin}% · ${esc(i.unit)}</div></div>
+          <button class="btn btn-sm" data-act="qPick" data-id="${i.id}">إضافة</button></div>`).join('') || '<div class="hint">لا توجد نتائج.</div>';
+    };
+    draw('');
+    bg.querySelector('#qSearch').addEventListener('input', e => draw(e.target.value.trim()));
+  });
+};
+ACTIONS.qPick = el => {
+  const it = getItems().find(i => i.id === el.dataset.id); if(!it) return;
+  const q = curQuote();
+  q.lines.push({id:uid('l'), name:it.name, spec:'', qty:1, unit:it.unit, cost:it.cost, margin:it.margin, supplier:it.supplier || ''});
+  saveQuote(q); repaint(); toast('أُضيف البند ✓', 'ok');
+};
+
+/* نص الواتساب و CSV */
+function quoteText(q){
+  const st = getSettings(), c = calcQuote(q);
+  const L = c.lines.map((l, i) => `${i + 1}. ${l.name}${l.spec ? ' — ' + l.spec : ''}\n   ${fmtInt(l.qty)} ${l.unit} × ${money(l.unitPrice)} = ${money(l.lineTotal)}`).join('\n');
+  return `${st.brandAr} — عرض سعر ${q.ref}
+التاريخ: ${fmtDate(q.date)} · صالح حتى ${fmtDate(addDays(q.date, q.validity))}
+العميل: ${q.client.name || '—'}${q.client.org ? ' — ' + q.client.org : ''}
+الموضوع: ${q.title || '—'}
+
+${L}
+
+إجمالي البنود: ${money(c.sell)}${c.fee ? '\nرسوم الخدمة: ' + money(c.fee) : ''}${c.delivery ? '\nشحن وتوصيل: ' + money(c.delivery) : ''}${c.discount ? '\nخصم: -' + money(c.discount) : ''}
+الإجمالي قبل الضريبة: ${money(c.subtotal)}
+ضريبة القيمة المضافة (${c.vatRate}%): ${money(c.vat)}
+الإجمالي شامل الضريبة: ${money(c.total)}
+${q.notes ? '\nملاحظات: ' + q.notes : ''}
+${st.phone ? '\nللتواصل: ' + st.phone : ''}`;
+}
+ACTIONS.qCopy = el => { const q = getQuotes().find(x => x.id === el.dataset.id); if(q) copyText(quoteText(q)); };
+ACTIONS.qCsv = el => {
+  const q = getQuotes().find(x => x.id === el.dataset.id); if(!q) return;
+  const c = calcQuote(q);
+  const rows = [['الصنف','المواصفات','الكمية','الوحدة','تكلفة الوحدة','هامش %','سعر الوحدة','الإجمالي','المورد']]
+    .concat(c.lines.map(l => [l.name, l.spec, l.qty, l.unit, l.cost, l.margin, l.unitPrice, l.lineTotal, l.supplier]));
+  const csv = '﻿' + rows.map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+  downloadFile(q.ref + '.csv', csv, 'text/csv;charset=utf-8');
+};
+
+/* الطباعة */
+ACTIONS.qPrint = el => {
+  const q = getQuotes().find(x => x.id === el.dataset.id); if(!q) return;
+  const st = getSettings(), c = calcQuote(q);
+  const rows = c.lines.map((l, i) => `<tr>
+    <td>${i + 1}</td><td>${esc(l.name)}${l.spec ? '<br><span style="color:#777;font-size:10px">' + esc(l.spec) + '</span>' : ''}</td>
+    <td class="num">${fmtInt(l.qty)}</td><td>${esc(l.unit)}</td>
+    <td class="num">${money(l.unitPrice, false)}</td><td class="num">${money(l.lineTotal, false)}</td></tr>`).join('');
+  document.getElementById('printDoc').innerHTML = `
+    <div class="p-head">
+      <div class="p-brand">${esc(st.brandAr)}<small>${esc(st.brandEn)}</small></div>
+      <div class="p-meta">
+        <b>عرض سعر</b> · ${esc(q.ref)}<br>
+        التاريخ: ${fmtDate(q.date)}<br>
+        صالح حتى: ${fmtDate(addDays(q.date, q.validity))}
+        ${st.vatNo ? '<br>الرقم الضريبي: ' + esc(st.vatNo) : ''}
+        ${st.crNo ? '<br>س.ت: ' + esc(st.crNo) : ''}
+      </div>
+    </div>
+    <table style="margin-bottom:14px"><tr>
+      <td style="width:50%"><b>العميل:</b> ${esc(q.client.name || '—')}${q.client.org ? '<br>' + esc(q.client.org) : ''}${q.client.city ? '<br>' + esc(q.client.city) : ''}</td>
+      <td><b>الموضوع:</b> ${esc(q.title || '—')}${q.client.phone ? '<br><b>جوال:</b> ' + esc(q.client.phone) : ''}</td>
+    </tr></table>
+    <h2>بنود العرض <span style="font-weight:400;font-size:10.5px;color:#777">(جميع المبالغ بالريال السعودي)</span></h2>
+    <table>
+      <thead><tr><th>#</th><th>الصنف</th><th class="num">الكمية</th><th>الوحدة</th><th class="num">سعر الوحدة</th><th class="num">الإجمالي</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="p-tot">
+      <div class="r"><span>إجمالي البنود</span><span>${money(c.sell, false)}</span></div>
+      ${c.fee ? `<div class="r"><span>رسوم الخدمة والإشراف</span><span>${money(c.fee, false)}</span></div>` : ''}
+      ${c.delivery ? `<div class="r"><span>شحن وتوصيل</span><span>${money(c.delivery, false)}</span></div>` : ''}
+      ${c.discount ? `<div class="r"><span>خصم</span><span>- ${money(c.discount, false)}</span></div>` : ''}
+      <div class="r"><span>الإجمالي قبل الضريبة</span><span>${money(c.subtotal, false)}</span></div>
+      <div class="r"><span>ضريبة القيمة المضافة (${c.vatRate}%)</span><span>${money(c.vat, false)}</span></div>
+      <div class="r g"><span>الإجمالي شامل الضريبة</span><span>${money(c.total)}</span></div>
+    </div>
+    ${q.notes ? `<div class="p-terms"><b>ملاحظات:</b>\n${esc(q.notes)}</div>` : ''}
+    <div class="p-terms"><b>الشروط والأحكام:</b>\n${esc(q.terms)}</div>
+    <div class="p-sign">
+      <div>مقدّم العرض: ${esc(st.owner || st.brandAr)}<br>${esc(st.phone || '')} ${st.email ? ' · ' + esc(st.email) : ''}</div>
+      <div>اعتماد العميل: ______________________</div>
+    </div>`;
+  window.print();
+};
+
+/* ==========================================================================
+   ٣) قائمة التسوق / أوامر الشراء
+   ========================================================================== */
+ACTIONS.qToPO = el => {
+  const q = getQuotes().find(x => x.id === el.dataset.id); if(!q) return;
+  const pos = getPOs();
+  const exist = pos.find(p => p.quoteId === q.id);
+  if(exist){ STATE.tab = 'buy'; STATE.poId = exist.id; render(); return toast('القائمة موجودة مسبقاً'); }
+  const c = calcQuote(q);
+  const po = {
+    id: uid('p'), ref: nextRef('po', 'PO'), createdAt: new Date().toISOString(),
+    quoteId: q.id, title: q.title || q.ref, client: q.client.name || '',
+    revenue: c.subtotal,
+    lines: c.lines.map(l => ({
+      id: uid('pl'), name:l.name, spec:l.spec, qty:l.qty, unit:l.unit,
+      supplier:l.supplier || '', est:r2(l.lineCost), actual:0, status:'todo', note:''
+    })),
+    notes: ''
+  };
+  pos.unshift(po); savePOs(pos);
+  STATE.tab = 'buy'; STATE.poId = po.id; render();
+  toast('تم إنشاء قائمة الشراء ' + po.ref + ' ✓', 'ok');
+};
+
+function poCalc(p){
+  const est = r2((p.lines || []).reduce((s, l) => s + num(l.est), 0));
+  const actual = r2((p.lines || []).reduce((s, l) => s + (num(l.actual) || 0), 0));
+  const spent = r2((p.lines || []).reduce((s, l) => s + (num(l.actual) || num(l.est)), 0));
+  const done = (p.lines || []).filter(l => l.status === 'received').length;
+  const diff = r2(est - actual);
+  const profit = p.revenue ? r2(num(p.revenue) - spent) : null;
+  return {est, actual, spent, diff, done, count:(p.lines || []).length, profit};
+}
+
+function poList(){
+  const pos = getPOs();
+  const rows = pos.map(p => {
+    const c = poCalc(p);
+    return `<div class="list-item">
+      <div class="li-main">
+        <div class="li-t">${esc(p.title)} <span class="badge b-mute">${c.done}/${c.count} مستلم</span></div>
+        <div class="li-s">${esc(p.ref)}${p.client ? ' · ' + esc(p.client) : ''} · تقديري ${money(c.est)} · فعلي ${money(c.actual)} · ${fmtDate(p.createdAt)}</div>
+      </div>
+      <div class="li-n">${c.profit !== null ? 'ربح ' + money(c.profit) : money(c.spent)}</div>
+      <div class="btn-row">
+        <button class="btn btn-sm btn-gold" data-act="poOpen" data-id="${p.id}">فتح</button>
+        <button class="btn btn-sm" data-act="poCopy" data-id="${p.id}">نسخ للمورد</button>
+        <button class="btn btn-sm btn-danger" data-act="poDelete" data-id="${p.id}">✕</button>
+      </div>
+    </div>`;
+  }).join('');
+  return `<div class="panel">
+    <div class="panel-head"><div><h3>قوائم التسوق والشراء</h3>
+      <div style="font-size:13px;color:var(--muted)">وش تحتاج تشتري من الموردين لكل مشروع — وكم صرفت فعلياً.</div></div>
+      <div class="spacer"></div>
+      <button class="btn btn-sm btn-gold" data-act="poNew">+ قائمة جديدة</button></div>
+    ${rows || '<div class="empty"><div class="e-ic">🛒</div>ما فيه قوائم شراء.<br><span class="hint">حوّل أي عرض سعر معتمد إلى قائمة شراء بضغطة واحدة.</span></div>'}
+  </div>`;
+}
+ACTIONS.poNew = () => {
+  const p = {id:uid('p'), ref:nextRef('po', 'PO'), createdAt:new Date().toISOString(), quoteId:'', title:'قائمة تسوق', client:'', revenue:0, lines:[], notes:''};
+  const all = getPOs(); all.unshift(p); savePOs(all);
+  STATE.poId = p.id; repaint();
+};
+ACTIONS.poOpen = el => { STATE.poId = el.dataset.id; repaint(); };
+ACTIONS.poBack = () => { STATE.poId = null; repaint(); };
+ACTIONS.poDelete = el => {
+  if(!confirm('حذف القائمة نهائياً؟')) return;
+  savePOs(getPOs().filter(p => p.id !== el.dataset.id));
+  STATE.poId = null; repaint(); toast('تم الحذف', 'ok');
+};
+function curPO(){ return getPOs().find(p => p.id === STATE.poId); }
+function savePO(p){
+  const all = getPOs(); const i = all.findIndex(x => x.id === p.id);
+  if(i > -1) all[i] = p; else all.unshift(p);
+  savePOs(all);
+}
+
+function poEditor(){
+  const p = curPO(); if(!p) return poList();
+  const c = poCalc(p);
+  const suppliers = [...new Set(p.lines.map(l => l.supplier || 'بدون مورد محدد'))];
+  const groups = suppliers.map(s => {
+    const ls = p.lines.filter(l => (l.supplier || 'بدون مورد محدد') === s);
+    const sum = r2(ls.reduce((a, l) => a + (num(l.actual) || num(l.est)), 0));
+    return `<div class="panel" style="background:var(--bg-2)">
+      <div class="panel-head" style="margin-bottom:12px">
+        <h3 style="font-size:14.5px">🏭 ${esc(s)}</h3>
+        <div class="spacer"></div>
+        <span class="li-n">${money(sum)}</span>
+        <button class="btn btn-sm" data-act="poCopyGroup" data-id="${p.id}" data-sup="${esc(s)}">نسخ طلبية المورد</button>
+      </div>
+      <div class="table-wrap">
+        <table class="wide"><thead><tr>
+          <th>الصنف</th><th>المواصفات</th><th>الكمية</th><th>الوحدة</th>
+          <th>تقديري</th><th>فعلي</th><th>المورد</th><th>الحالة</th><th>ملاحظة</th><th></th>
+        </tr></thead><tbody>
+        ${ls.map(l => `<tr data-pl="${l.id}">
+          <td><input class="cell-inp" data-input="poLine" data-f="name" value="${esc(l.name)}"></td>
+          <td><input class="cell-inp" data-input="poLine" data-f="spec" value="${esc(l.spec)}"></td>
+          <td class="w-xs"><input class="cell-inp" type="number" min="0" data-input="poLine" data-f="qty" value="${esc(l.qty)}"></td>
+          <td class="w-md"><select class="cell-inp" data-change="poLine" data-f="unit">${UNITS.map(u => `<option ${u === l.unit ? 'selected' : ''}>${u}</option>`).join('')}</select></td>
+          <td class="w-sm"><input class="cell-inp" type="number" min="0" step="0.01" data-input="poLine" data-f="est" value="${esc(l.est)}"></td>
+          <td class="w-sm"><input class="cell-inp" type="number" min="0" step="0.01" data-input="poLine" data-f="actual" value="${esc(l.actual)}"></td>
+          <td class="w-md"><input class="cell-inp" data-input="poLine" data-f="supplier" value="${esc(l.supplier)}" placeholder="المورد"></td>
+          <td class="w-md"><select class="cell-inp" data-change="poLineStatus" data-f="status">
+            ${Object.keys(PO_STATUS).map(k => `<option value="${k}" ${l.status === k ? 'selected' : ''}>${PO_STATUS[k].label}</option>`).join('')}
+          </select></td>
+          <td><input class="cell-inp" data-input="poLine" data-f="note" value="${esc(l.note)}" placeholder="رقم الفاتورة، موعد الاستلام…"></td>
+          <td class="w-xs"><button class="btn btn-sm btn-danger" data-act="poLineDel" data-id="${l.id}">✕</button></td>
+        </tr>`).join('')}
+        </tbody></table>
+      </div>
+    </div>`;
+  }).join('');
+
+  return `
+  <div class="panel">
+    <div class="panel-head">
+      <button class="btn btn-sm btn-ghost" data-act="poBack">← رجوع</button>
+      <h3>${esc(p.ref)}</h3>
+      <div class="spacer"></div>
+      <button class="btn btn-sm" data-act="poLineAdd">+ صنف</button>
+      <button class="btn btn-sm" data-act="poCopy" data-id="${p.id}">نسخ القائمة</button>
+      <button class="btn btn-sm" data-act="poCsv" data-id="${p.id}">CSV</button>
+    </div>
+    <div class="row r3">
+      <div class="field"><label>عنوان القائمة</label><input class="inp" data-input="poField" data-f="title" value="${esc(p.title)}"></div>
+      <div class="field"><label>العميل / المشروع</label><input class="inp" data-input="poField" data-f="client" value="${esc(p.client)}"></div>
+      <div class="field"><label>إيراد المشروع قبل الضريبة (ر.س)</label><input class="inp" type="number" min="0" step="0.01" data-input="poField" data-f="revenue" value="${esc(p.revenue)}"></div>
+    </div>
+    <div class="kpis" style="margin-top:6px">
+      <div class="kpi"><div class="l">عدد الأصناف</div><div class="n">${c.count}</div></div>
+      <div class="kpi"><div class="l">التكلفة التقديرية</div><div class="n">${money(c.est)}</div></div>
+      <div class="kpi"><div class="l">المصروف الفعلي</div><div class="n gold">${money(c.actual)}</div></div>
+      <div class="kpi"><div class="l">${c.profit !== null ? 'الربح الفعلي' : 'الفرق عن التقدير'}</div>
+        <div class="n ${(c.profit !== null ? c.profit : c.diff) >= 0 ? 'green' : ''}">${money(c.profit !== null ? c.profit : c.diff)}</div></div>
+    </div>
+  </div>
+  ${p.lines.length ? groups : '<div class="panel"><div class="empty"><div class="e-ic">🛒</div>القائمة فاضية — أضف أصناف.</div></div>'}
+  <div class="panel">
+    <div class="field"><label>ملاحظات القائمة</label><textarea class="inp" data-input="poField" data-f="notes">${esc(p.notes)}</textarea></div>
+  </div>`;
+}
+ACTIONS.poField = el => {
+  const p = curPO(); if(!p) return;
+  p[el.dataset.f] = el.dataset.f === 'revenue' ? num(el.value) : el.value;
+  savePO(p);
+};
+ACTIONS.poLine = el => {
+  const p = curPO(); if(!p) return;
+  const l = p.lines.find(x => x.id === el.closest('[data-pl]').dataset.pl); if(!l) return;
+  const f = el.dataset.f;
+  l[f] = ['qty','est','actual'].includes(f) ? num(el.value) : el.value;
+  savePO(p);
+};
+ACTIONS.poLineStatus = el => {
+  const p = curPO(); if(!p) return;
+  const l = p.lines.find(x => x.id === el.closest('[data-pl]').dataset.pl); if(!l) return;
+  l.status = el.value; savePO(p); repaint();
+};
+ACTIONS.poLineAdd = () => {
+  const p = curPO();
+  p.lines.push({id:uid('pl'), name:'', spec:'', qty:1, unit:'حبة', supplier:'', est:0, actual:0, status:'todo', note:''});
+  savePO(p); repaint();
+};
+ACTIONS.poLineDel = el => {
+  const p = curPO(); p.lines = p.lines.filter(l => l.id !== el.dataset.id); savePO(p); repaint();
+};
+function poText(p, supplier){
+  const st = getSettings();
+  const ls = supplier ? p.lines.filter(l => (l.supplier || 'بدون مورد محدد') === supplier) : p.lines;
+  const L = ls.map((l, i) => `${i + 1}. ${l.name}${l.spec ? ' — ' + l.spec : ''} : ${fmtInt(l.qty)} ${l.unit}`).join('\n');
+  return `${st.brandAr} — طلب توريد
+المرجع: ${p.ref}${supplier ? '\nالمورد: ' + supplier : ''}
+المشروع: ${p.title}${p.client ? ' — ' + p.client : ''}
+
+${L}
+
+${p.notes ? 'ملاحظات: ' + p.notes + '\n' : ''}يرجى تزويدنا بالسعر ومدة التنفيذ.
+${st.phone ? 'للتواصل: ' + st.phone : ''}`;
+}
+ACTIONS.poCopy = el => { const p = getPOs().find(x => x.id === el.dataset.id); if(p) copyText(poText(p)); };
+ACTIONS.poCopyGroup = el => { const p = getPOs().find(x => x.id === el.dataset.id); if(p) copyText(poText(p, el.dataset.sup)); };
+ACTIONS.poCsv = el => {
+  const p = getPOs().find(x => x.id === el.dataset.id); if(!p) return;
+  const rows = [['الصنف','المواصفات','الكمية','الوحدة','المورد','تقديري','فعلي','الحالة','ملاحظة']]
+    .concat(p.lines.map(l => [l.name, l.spec, l.qty, l.unit, l.supplier, l.est, l.actual, PO_STATUS[l.status].label, l.note]));
+  const csv = '﻿' + rows.map(r => r.map(v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+  downloadFile(p.ref + '.csv', csv, 'text/csv;charset=utf-8');
+};
+
+/* ==========================================================================
+   ٤) الأصناف والموردين
+   ========================================================================== */
+function catalogTab(){
+  const items = getItems();
+  const list = items.filter(i => (STATE.catFilter === 'all' || i.cat === STATE.catFilter) && (!STATE.q || i.name.includes(STATE.q)));
+  const chips = ['all'].concat(CATEGORIES.map(c => c.id)).map(k => {
+    const label = k === 'all' ? 'الكل' : CATEGORIES.find(c => c.id === k).name;
+    return `<button class="btn btn-sm ${STATE.catFilter === k ? 'btn-gold' : 'btn-ghost'}" data-act="catFilter" data-id="${k}">${label}</button>`;
+  }).join('');
+  const rows = list.map(i => `<tr data-it="${i.id}">
+    <td><input class="cell-inp" data-input="itEdit" data-f="name" value="${esc(i.name)}"></td>
+    <td class="w-md"><select class="cell-inp" data-change="itEdit" data-f="cat">${CATEGORIES.map(c => `<option value="${c.id}" ${i.cat === c.id ? 'selected' : ''}>${c.name}</option>`).join('')}</select></td>
+    <td class="w-md"><select class="cell-inp" data-change="itEdit" data-f="unit">${UNITS.map(u => `<option ${u === i.unit ? 'selected' : ''}>${u}</option>`).join('')}</select></td>
+    <td class="w-sm"><input class="cell-inp" type="number" min="0" step="0.01" data-input="itEdit" data-f="cost" value="${esc(i.cost)}"></td>
+    <td class="w-xs"><input class="cell-inp" type="number" min="0" step="1" data-input="itEdit" data-f="margin" value="${esc(i.margin)}"></td>
+    <td class="num">${money(num(i.cost) * (1 + num(i.margin) / 100), false)}</td>
+    <td class="w-xs"><input class="cell-inp" type="number" min="0" data-input="itEdit" data-f="lead" value="${esc(i.lead)}"></td>
+    <td class="w-md"><input class="cell-inp" data-input="itEdit" data-f="supplier" value="${esc(i.supplier || '')}" placeholder="المورد"></td>
+    <td class="w-xs"><button class="btn btn-sm btn-danger" data-act="itDel" data-id="${i.id}">✕</button></td>
+  </tr>`).join('');
+
+  const sups = getSuppliers();
+  const supRows = sups.map(s => `<tr data-sp="${s.id}">
+    <td><input class="cell-inp" data-input="spEdit" data-f="name" value="${esc(s.name)}"></td>
+    <td class="w-md"><input class="cell-inp" data-input="spEdit" data-f="phone" value="${esc(s.phone)}"></td>
+    <td class="w-md"><input class="cell-inp" data-input="spEdit" data-f="city" value="${esc(s.city)}"></td>
+    <td><input class="cell-inp" data-input="spEdit" data-f="note" value="${esc(s.note)}" placeholder="تخصصه، شروط الدفع، ملاحظات…"></td>
+    <td class="w-xs"><button class="btn btn-sm btn-danger" data-act="spDel" data-id="${s.id}">✕</button></td>
+  </tr>`).join('');
+
+  return `
+  <div class="panel">
+    <div class="panel-head">
+      <div><h3>كتالوج الأصناف والأسعار</h3>
+      <div style="font-size:13px;color:var(--muted)">تكلفة المورد + هامشك = سعر البيع. هذي الأسعار تُستخدم تلقائياً في العروض.</div></div>
+      <div class="spacer"></div>
+      <input class="inp" style="width:180px" placeholder="بحث…" value="${esc(STATE.q)}" data-input="catSearchIn">
+      <button class="btn btn-sm btn-gold" data-act="itAdd">+ صنف</button>
+    </div>
+    <div class="btn-row" style="margin-bottom:16px">${chips}</div>
+    <div class="table-wrap">
+      <table class="wide"><thead><tr>
+        <th>الصنف</th><th>القسم</th><th>الوحدة</th><th>تكلفة المورد</th><th>هامش %</th>
+        <th class="num">سعر البيع</th><th>مدة (يوم)</th><th>المورد</th><th></th>
+      </tr></thead><tbody>${rows}</tbody></table>
+    </div>
+    ${list.length ? '' : '<div class="empty"><div class="e-ic">📦</div>لا توجد أصناف مطابقة.</div>'}
+  </div>
+
+  <div class="panel">
+    <div class="panel-head"><div><h3>الموردين</h3>
+      <div style="font-size:13px;color:var(--muted)">دفتر موردينك — مين يسوي وش، وكيف توصله.</div></div>
+      <div class="spacer"></div><button class="btn btn-sm btn-gold" data-act="spAdd">+ مورد</button></div>
+    ${sups.length ? `<div class="table-wrap"><table><thead><tr><th>الاسم</th><th>الجوال</th><th>المدينة</th><th>ملاحظات</th><th></th></tr></thead><tbody>${supRows}</tbody></table></div>`
+      : '<div class="empty"><div class="e-ic">🏭</div>ما سجلت موردين بعد.</div>'}
+  </div>`;
+}
+ACTIONS.catFilter = el => { STATE.catFilter = el.dataset.id; repaint(); };
+ACTIONS.catSearchIn = el => {
+  STATE.q = el.value; const pos = el.selectionStart;
+  const b = document.getElementById('tabBody'); b.innerHTML = tabBody();
+  const n = b.querySelector('[data-input="catSearchIn"]'); if(n){ n.focus(); n.setSelectionRange(pos, pos); }
+};
+ACTIONS.itAdd = () => {
+  const items = getItems();
+  items.unshift({id:uid('it'), cat:(STATE.catFilter === 'all' ? 'print' : STATE.catFilter), name:'صنف جديد', unit:'حبة', cost:0, margin:getSettings().defaultMargin, lead:3, supplier:''});
+  saveItems(items); repaint();
+};
+ACTIONS.itEdit = el => {
+  const items = getItems();
+  const it = items.find(x => x.id === el.closest('[data-it]').dataset.it); if(!it) return;
+  const f = el.dataset.f;
+  it[f] = ['cost','margin','lead'].includes(f) ? num(el.value) : el.value;
+  saveItems(items);
+  if(f === 'cost' || f === 'margin'){
+    const tr = el.closest('[data-it]');
+    tr.querySelector('td.num').textContent = money(num(it.cost) * (1 + num(it.margin) / 100), false);
+  }
+};
+ACTIONS.itDel = el => {
+  if(!confirm('حذف الصنف من الكتالوج؟')) return;
+  saveItems(getItems().filter(i => i.id !== el.dataset.id)); repaint();
+};
+ACTIONS.spAdd = () => {
+  const s = getSuppliers(); s.unshift({id:uid('sp'), name:'مورد جديد', phone:'', city:'', note:''});
+  saveSuppliers(s); repaint();
+};
+ACTIONS.spEdit = el => {
+  const s = getSuppliers(); const sp = s.find(x => x.id === el.closest('[data-sp]').dataset.sp);
+  if(sp){ sp[el.dataset.f] = el.value; saveSuppliers(s); }
+};
+ACTIONS.spDel = el => {
+  saveSuppliers(getSuppliers().filter(s => s.id !== el.dataset.id)); repaint();
+};
+
+/* ==========================================================================
+   ٥) الإعدادات
+   ========================================================================== */
+function settingsTab(){
+  const s = getSettings();
+  return `
+  <form data-submit="setSave">
+    <div class="panel">
+      <h3>هوية النشاط</h3>
+      <div class="psub">تظهر في الموقع وفي عروض الأسعار المطبوعة.</div>
+      <div class="row r2">
+        <div class="field"><label>الاسم بالعربي</label><input class="inp" name="brandAr" value="${esc(s.brandAr)}"></div>
+        <div class="field"><label>الاسم بالإنجليزي</label><input class="inp" name="brandEn" value="${esc(s.brandEn)}"></div>
+      </div>
+      <div class="field"><label>الجملة التعريفية</label><input class="inp" name="tagline" value="${esc(s.tagline)}"></div>
+      <div class="row r4">
+        <div class="field"><label>اسم المسؤول</label><input class="inp" name="owner" value="${esc(s.owner)}"></div>
+        <div class="field"><label>الجوال / واتساب</label><input class="inp" name="phone" value="${esc(s.phone)}" placeholder="9665xxxxxxxx"></div>
+        <div class="field"><label>البريد</label><input class="inp" name="email" value="${esc(s.email)}"></div>
+        <div class="field"><label>المدينة</label><input class="inp" name="city" value="${esc(s.city)}"></div>
+      </div>
+      <div class="row r2">
+        <div class="field"><label>الرقم الضريبي</label><input class="inp" name="vatNo" value="${esc(s.vatNo)}"></div>
+        <div class="field"><label>السجل التجاري</label><input class="inp" name="crNo" value="${esc(s.crNo)}"></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>قواعد التسعير</h3>
+      <div class="psub">القيم الافتراضية لأي عرض جديد.</div>
+      <div class="row r4">
+        <div class="field"><label>ضريبة القيمة المضافة %</label><input class="inp" name="vatRate" type="number" min="0" step="0.5" value="${esc(s.vatRate)}"></div>
+        <div class="field"><label>هامش الوساطة الافتراضي %</label><input class="inp" name="defaultMargin" type="number" min="0" step="1" value="${esc(s.defaultMargin)}"></div>
+        <div class="field"><label>نوع رسوم الخدمة</label>
+          <select class="inp" name="serviceFeeType">
+            <option value="pct" ${s.serviceFeeType === 'pct' ? 'selected' : ''}>نسبة %</option>
+            <option value="fixed" ${s.serviceFeeType === 'fixed' ? 'selected' : ''}>مبلغ ثابت</option>
+          </select></div>
+        <div class="field"><label>قيمة رسوم الخدمة</label><input class="inp" name="serviceFeeValue" type="number" min="0" step="0.01" value="${esc(s.serviceFeeValue)}"></div>
+      </div>
+      <div class="row r2">
+        <div class="field"><label>صلاحية العرض (يوم)</label><input class="inp" name="validityDays" type="number" min="1" value="${esc(s.validityDays)}"></div>
+        <div class="field"><label>رمز الدخول لمساحة العمل</label><input class="inp" name="passcode" value="${esc(s.passcode)}"></div>
+      </div>
+      <div class="field"><label>الشروط والأحكام الافتراضية</label><textarea class="inp" name="terms" style="min-height:150px">${esc(s.terms)}</textarea></div>
+      <div class="btn-row"><button class="btn btn-gold" type="submit">حفظ الإعدادات</button></div>
+    </div>
+  </form>
+
+  <div class="panel">
+    <h3>النسخ الاحتياطي</h3>
+    <div class="psub">البيانات محفوظة في هذا المتصفح فقط. نزّل نسخة بشكل دوري، خصوصاً قبل تغيير الجهاز أو مسح بيانات المتصفح.</div>
+    <div class="btn-row">
+      <button class="btn btn-gold" data-act="backupOut">تنزيل نسخة احتياطية</button>
+      <button class="btn" data-act="backupIn">استرجاع من ملف</button>
+      <button class="btn btn-danger" data-act="wipe">مسح كل البيانات</button>
+    </div>
+    <input type="file" id="fileIn" accept="application/json" style="display:none">
+  </div>`;
+}
+ACTIONS.setSave = form => {
+  const f = Object.fromEntries(new FormData(form).entries());
+  const s = getSettings();
+  ['brandAr','brandEn','tagline','owner','phone','email','city','vatNo','crNo','serviceFeeType','passcode','terms'].forEach(k => s[k] = f[k]);
+  ['vatRate','defaultMargin','serviceFeeValue','validityDays'].forEach(k => s[k] = num(f[k]));
+  saveSettings(s); brandUp(); render();
+  toast('تم حفظ الإعدادات ✓', 'ok');
+};
+ACTIONS.backupOut = () => {
+  downloadFile('silk-bridge-backup-' + today() + '.json', JSON.stringify(exportAll(), null, 2));
+  toast('تم تنزيل النسخة ✓', 'ok');
+};
+ACTIONS.backupIn = () => {
+  const inp = document.getElementById('fileIn');
+  inp.onchange = () => {
+    const file = inp.files[0]; if(!file) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      try{ importAll(JSON.parse(rd.result)); brandUp(); render(); toast('تم الاسترجاع ✓', 'ok'); }
+      catch(e){ toast('الملف غير صالح: ' + e.message, 'err'); }
+    };
+    rd.readAsText(file);
+  };
+  inp.click();
+};
+ACTIONS.wipe = () => {
+  if(!confirm('سيتم مسح كل الطلبات والعروض والأصناف. متأكد؟')) return;
+  if(!confirm('تأكيد أخير — هل نزّلت نسخة احتياطية؟')) return;
+  ['settings','items','suppliers','requests','quotes','pos'].forEach(k => DB.drop(k));
+  STATE.tab = 'inbox'; STATE.quoteId = null; STATE.poId = null;
+  brandUp(); render(); toast('تم المسح', 'ok');
+};
+
+</script>
+</body>
+</html>
